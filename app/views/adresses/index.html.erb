@@ -1,5 +1,9 @@
 <h1>Toutes les adresses</h1>
+
+<a href="<%= new_adress_path %>">Ajouter une nouvelle adresse</a>
+
 <% @adresses.each do |adresse| %>
-	<p> <%= adresse.title %></p>
+	<p><a href="<%= adress_path adresse %>"><%= adresse.title %></a></p>
 <% end %>
+
 
