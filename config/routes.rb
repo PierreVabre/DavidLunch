@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 	
+  devise_for :users
   resources 'adresses'#, only: [:index, :show, :create, :new, :destroy, :edit]
   get 'pages/home'
 
