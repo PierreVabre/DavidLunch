@@ -17,6 +17,10 @@ class AdressesController < ApplicationController
   	@adresse.destroy
   	redirect_to adresses_path
   end
+
+  def edit
+  	@adresse = Adresse.find(params[:id])
+  end
 end
 
 #adresses_path

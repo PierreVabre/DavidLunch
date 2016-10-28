@@ -1,0 +1,5 @@
+<%= form_tag "/adresses", method: "post" do %> 
+	<input type="text" name="title" placeholder="nom de l'adresse" value="<%= @adresse.title %>"/> 
+	<input type="submit" value="Ajouter cette adresse"/>
+<% end %>
+
