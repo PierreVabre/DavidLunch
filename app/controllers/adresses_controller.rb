@@ -1,26 +1,30 @@
 class AdressesController < ApplicationController
+
+  before_action :set_adresse, only: [:show, :edit, :destroy, :update]
+
   def index
   	@adresses = Adresse.all
   end
 
   def create
- 	@adresse = Adresse.create title: params[:title]
  	redirect_to adress_path @adresse
   end
 
   def show
-  	@adresse = Adresse.find(params[:id])
   end
 
   def destroy
-  	@adresse = Adresse.find(params[:id])
   	@adresse.destroy
   	redirect_to adresses_path
   end
 
   def edit
-  	@adresse = Adresse.find(params[:id])
   end
+
+  private
+    def set_adresse
+      @adresse = Adresse.find(params[:id])
+    end
 end
 
 #adresses_path
