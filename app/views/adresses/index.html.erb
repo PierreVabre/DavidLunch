@@ -1,7 +1,9 @@
-<h1>Toutes les adresses</h1>
+<a href="<%= welcome_home_url %>">RETOUR</a>
+
+<h1>Gestion des adresses</h1>
 
 <a href="<%= new_adress_path %>">Ajouter une nouvelle adresse</a>
-
+<br/><br/>
 <% @adresses.each do |adresse| %>
 	
 	<a class="adresse_carte" href="<%= adress_path adresse %>">

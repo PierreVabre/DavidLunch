@@ -1,0 +1,30 @@
+<h1>David Lunch</h1>
+<p>On s'en met plein derrière la cravatte à moins de 15 minutes du 15.</p>
+
+<br/><br/>
+<hr/>
+<h2>Les catégories</h2>
+<a href="<%= categories_path %>">Gérer les catégories</a>
+<br/><br/>
+<% @categories.each do |category| %>
+	<a class="category" href="<%= category_path category %>">
+		<span class="category_title">
+			<%= category.title %>
+		</span>
+	</a>
+<% end %>
+<div class="clearfix"></div>
+
+<br/><br/>
+<hr/>
+<h2>Les adresses</h2>
+<a href="<%= adresses_path %>">Gérer les adresses</a>
+<br/><br/>
+<% @adresses.each do |adresse| %>
+	<a class="adresse_carte" href="<%= adress_path adresse %>">
+		<span class="adresse_nom">
+			<%= adresse.title %>
+		</span>
+	</a>
+<% end %>
+<div class="clearfix"></div>
