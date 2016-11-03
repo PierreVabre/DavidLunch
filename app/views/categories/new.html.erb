@@ -1,0 +1,13 @@
+<h1>Ajouter une catégorie</h1>
+
+<%= simple_form_for @category do |f| %>
+
+	 <%= f.input :title, label: 'Nom : ', error: 'obligatoire' %>
+
+	 <%= f.input :description, label: 'Description : ' %>
+
+	 <%= f.input :parent, label: 'Parent : ' %>
+
+	 <%= f.button :submit %>
+
+<% end %>
