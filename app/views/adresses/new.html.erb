@@ -1,6 +1,17 @@
 <h1>Ajouter une adresses</h1>
 
-<%= form_tag "/adresses", method: "post" do %> 
-	<input type="text" name="title" placeholder="nom de l'adresse"/> 
-	<input type="submit" value="Ajouter cette adresse"/>
+<%= simple_form_for @adresse do |f| %>
+
+	 <%= f.input :title, label: 'Nom :', error: 'obligatoire' %>
+
+	 <%= f.input :description, label: 'Description :', error: 'obligatoire' %>
+
+	 <%= f.input :price %>
+
+	 <%= f.input :time_to_go %>
+
+	 <%= f.input :credit_card %>
+
+	 <%= f.button :submit %>
+
 <% end %>

@@ -6,8 +6,14 @@ class AdressesController < ApplicationController
   	@adresses = Adresse.all
   end
 
+  def new
+    @adresse = Adresse.new
+  end
+
   def create
- 	redirect_to adress_path @adresse
+    @adresse = Adresse.new(adresse_params)
+    @adresse.save
+ 	  redirect_to adress_path @adresse
   end
 
   def show
@@ -18,10 +24,18 @@ class AdressesController < ApplicationController
   	redirect_to adresses_path
   end
 
-  def edit
+  def update
+    if @adresse.update(adresse_params)
+      redirect_to @adresse, notice: "adresse updatée"
+    else
+      render :edit
+    end
   end
 
   private
+    def adresse_params
+      params.require(:adresse).permit(:title, :description, :price, :credit_card, :time_to_go)
+    end
     def set_adresse
       @adresse = Adresse.find(params[:id])
     end

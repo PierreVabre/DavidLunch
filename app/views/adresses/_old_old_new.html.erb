@@ -1,0 +1,55 @@
+<h1>Ajouter une adresses</h1>
+
+<%= form_tag "/adresses", method: "post" do %> 
+	<p>
+		<%= label_tag(:title, "Nom de l'adresse :") %>
+		<br/>
+		<%= text_field_tag(:title) %>
+	</p>
+	<p>
+		<%= label_tag(:description, "Description :") %> 
+		<br/>
+		<%= text_area_tag(:Description, "", size: "24x6") %>
+	</p>
+	<p>
+		<%= label_tag(:price, "Prix :") %>
+		<%= select_tag(
+				:price, 
+				options_for_select(
+					[
+						['€', 1],
+						['€€', 2],
+						['€€€', 3]
+					]
+				)
+			) %>
+	</p>
+	<p>
+		<%= label_tag(:credit_card, "Carte de crédit :") %>
+		<%= select_tag(
+				:credit_card,
+				options_for_select(
+					[
+						['acceptée', true],
+						['non acceptée', false]
+					]
+				)
+			) %>
+	</p>
+
+	<p>
+		<%= label_tag(:credit_card, "Carte de crédit :") %>
+		<%= select_tag(
+				:credit_card,
+				options_for_select(
+					[
+						['moins de 5 minutes', 1],
+						['entre 5 et 10 minutes', 2],
+						['entre 10 et 15 minutes', 3]
+					]
+				)
+			) %>
+	</p>
+
+	<%= submit_tag("Ajouter cette adresse") %>
+<% end %>

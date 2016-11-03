@@ -3,7 +3,13 @@
 <a href="<%= new_adress_path %>">Ajouter une nouvelle adresse</a>
 
 <% @adresses.each do |adresse| %>
-	<p><a href="<%= adress_path adresse %>"><%= adresse.title %></a></p>
+	
+	<a class="adresse_carte" href="<%= adress_path adresse %>">
+		<span class="adresse_nom">
+			<%= adresse.title %>
+		</span>
+	</a>
+
 <% end %>
 
 

@@ -1,5 +1,12 @@
 <a href="<%= adresses_path %>">retour à la liste des adresses</a>
+
 <h1><%= @adresse.title %></h1>
+
+<p>Description : <br/><%= @adresse.description %></p>
+<p>Prix : <br/><%= @adresse.price %></p>
+<p>Distance à pied : <br/><%= @adresse.time_to_go %></p>
+<p>Accepte la carte bleue : <br/><%= @adresse.credit_card %></p>
+
 <a href="<%= edit_adress_path @adresse %>">Modifier cette adresse</a>
 <%= link_to 'Supprimer cette adresse', adress_path(@adresse),
               method: :delete,
