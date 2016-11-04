@@ -8,15 +8,19 @@
 
 <% @categories.each do |category| %>
 	
-	<a class="category" href="<%= category_path category %>">
+	<a class="" href="<%= category_path category %>">
 		<span class="category_title">
 			<%= category.title %>
 		</span>
 	</a>
 	-
+	<a href="<%= edit_category_path(category.id) %>">
+		Modifier
+	</a>
+	 - 
 	<%= link_to 'Supprimer', category_path(category.id),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %>
+              data: { confirm: 'Ca risque de foutre le bordel man' } %>
    	<br/>
 <% end %>
 
