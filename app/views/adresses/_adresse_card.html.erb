@@ -1,0 +1,10 @@
+<div class="adresse_carte">
+	<a class="adresse_title" href="<%= adress_path adresse %>">
+		<%= adresse.title %>		
+	</a>
+	<br/>
+	<% @category = Category.find(adresse.category_id) %>
+	<a class="category_title" href="<%= category_path @category %>">
+		<%= @category.title %>
+	</a>
+</div>

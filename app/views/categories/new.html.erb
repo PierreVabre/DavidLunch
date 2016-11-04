@@ -1,12 +1,14 @@
+<a href="<%= categories_path %>">RETOUR</a>
+
 <h1>Ajouter une catégorie</h1>
 
 <%= simple_form_for @category do |f| %>
 
-	 <%= f.input :title, label: 'Nom : ', error: 'obligatoire' %>
+	 <%= f.input :title, label: 'Nom : ', error: 'obligatoire', required: true %>
 
 	 <%= f.input :description, label: 'Description : ' %>
 
-	 <%= f.input :parent, label: 'Parent : ' %>
+	 <%= f.input :parent, label: 'Parent : ', required: true %>
 
 	 <%= f.button :submit %>
 

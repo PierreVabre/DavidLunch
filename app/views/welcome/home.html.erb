@@ -21,10 +21,15 @@
 <a href="<%= adresses_path %>">Gérer les adresses</a>
 <br/><br/>
 <% @adresses.each do |adresse| %>
-	<a class="adresse_carte" href="<%= adress_path adresse %>">
-		<span class="adresse_nom">
-			<%= adresse.title %>
-		</span>
-	</a>
+	<div class="adresse_carte">
+		<a class="adresse_title" href="<%= adress_path adresse %>">
+			<%= adresse.title %>		
+		</a>
+		<br/>
+		<% @category = Category.find(adresse.category_id) %>
+		<a class="category_title" href="<%= category_path @category %>">
+			<%= @category.title %>
+		</a>
+	</div>
 <% end %>
 <div class="clearfix"></div>

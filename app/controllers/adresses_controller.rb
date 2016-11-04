@@ -4,6 +4,7 @@ class AdressesController < ApplicationController
 
   def index
   	@adresses = Adresse.all
+    @categories = Category.all
   end
 
   def new
@@ -11,12 +12,13 @@ class AdressesController < ApplicationController
   end
 
   def create
-    @adresse = Adresse.new(adresse_params)
+    @adresse = Adresse.create(adresse_params)
     @adresse.save
  	  redirect_to adress_path @adresse
   end
 
   def show
+    
   end
 
   def destroy
@@ -34,10 +36,11 @@ class AdressesController < ApplicationController
 
   private
     def adresse_params
-      params.require(:adresse).permit(:title, :description, :price, :credit_card, :time_to_go)
+      params.require(:adresse).permit(:title, :description, :price, :credit_card, :time_to_go, :category_id)
     end
     def set_adresse
       @adresse = Adresse.find(params[:id])
+      @category = Category.find(@adresse.category_id)
     end
 end
 
