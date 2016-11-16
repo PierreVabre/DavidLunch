@@ -6,6 +6,8 @@
 <p>Prix : <br/><%= @adresse.price %></p>
 <p>Distance à pied : <br/><%= @adresse.time_to_go %></p>
 <p>Accepte la carte bleue : <br/><%= @adresse.credit_card %></p>
+<p>Latitude : <br/><%= @adresse.latitude %></p>
+<p>Longitude : <br/><%= @adresse.longitude %></p>
 
 <a href="<%= edit_adress_path @adresse %>">Modifier cette adresse</a>
 <%= link_to 'Supprimer cette adresse', adress_path(@adresse),

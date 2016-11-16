@@ -9,13 +9,17 @@
 
 	 <%= f.input :description, label: 'Description :', error: 'obligatoire' %>
 
-	 <%= f.input :category_id %>
+	 <%= f.association :category %>
 
 	 <%= f.input :price %>
 
 	 <%= f.input :time_to_go %>
 
 	 <%= f.input :credit_card %>
+
+	 <%= f.input :latitude %>
+
+	 <%= f.input :longitude %>
 
 	 <%= f.button :submit %>
 

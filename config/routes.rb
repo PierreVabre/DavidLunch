@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources 'adresses'#, only: [:index, :show, :create, :new, :destroy, :edit]
   resources 'categories'#, only: [:index, :show, :create, :new, :destroy, :edit]
+  resources 'subcategories'#, only: [:index, :show, :create, :new, :destroy, :edit]
   get 'pages/home'
   get 'welcome/home'
   root 'welcome#home'

@@ -1,0 +1,25 @@
+<a href="<%= categories_path %>">RETOUR</a>
+
+<h1>Gestion des sous-catégories</h1>
+
+<a href="<%= new_subcategory_path %>">Ajouter une nouvelle sous-catégorie</a>
+
+<br/><br/>
+
+<% @subcategories.each do |subcategory| %>
+	
+	<a class="" href="<%= subcategory_path subcategory %>">
+		<span class="subcategory_title">
+			<%= subcategory.title %>
+		</span>
+	</a>
+	-
+	<a href="<%= edit_subcategory_path(subcategory.id) %>">
+		Modifier
+	</a>
+	 - 
+	<%= link_to 'Supprimer', subcategory_path(subcategory.id),
+              method: :delete,
+              data: { confirm: 'Ca risque de foutre le bordel man' } %>
+   	<br/>
+<% end %>

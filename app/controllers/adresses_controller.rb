@@ -36,7 +36,7 @@ class AdressesController < ApplicationController
 
   private
     def adresse_params
-      params.require(:adresse).permit(:title, :description, :price, :credit_card, :time_to_go, :category_id)
+      params.require(:adresse).permit(:title, :description, :price, :credit_card, :time_to_go, :category_id, :latitude, :longitude)
     end
     def set_adresse
       @adresse = Adresse.find(params[:id])

@@ -1,27 +1,28 @@
 # == Schema Information
 #
-# Table name: categories
+# Table name: subcategories
 #
 #  id          :integer          not null, primary key
 #  title       :string
 #  description :text
-#  parent      :integer
+#  category_id :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  parent_id   :integer
+#  category    :integer
 #
 # Indexes
 #
-#  index_categories_on_parent     (parent)
-#  index_categories_on_parent_id  (parent_id)
+#  index_subcategories_on_category  (category)
 #
 
-class Category < ApplicationRecord
-	
+class Subcategory < ApplicationRecord
+
+	belongs_to :category
 	has_many :adresses
-	has_many :subcategories
-	
+
+	#has_many :subcategory
 	#belongs_to :parent_id, class_name: "Category"
+
 	#belongs_to :parent, :class_name => "Category"
 	#has_many :category, :foreign_key => "parent_id"
 

@@ -1,0 +1,15 @@
+<a href="<%= subcategories_path %>">RETOUR</a>
+
+<h1>Ajouter une sous-catégorie</h1>
+
+<%= simple_form_for @subcategory do |f| %>
+
+	 <%= f.input :title, label: 'Nom : ', error: 'obligatoire', required: true %>
+
+	 <%= f.input :description, label: 'Description : ' %>
+
+	 <%= f.association :category, required: true %>
+
+	 <%= f.button :submit %>
+
+<% end %>
