@@ -31,6 +31,7 @@ gem 'devise'
 gem 'annotate'
 gem 'simple_form'
 gem 'gmaps4rails'
+gem 'gmap_coordinates_picker', '~> 0.1.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

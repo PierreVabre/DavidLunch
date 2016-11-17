@@ -17,9 +17,7 @@
 
 	 <%= f.input :credit_card %>
 
-	 <%= f.input :latitude %>
-
-	 <%= f.input :longitude %>
+	 <%= f.gmap_coordinate_picker :lat_column => 'latitude', :lng_column => 'longitude' , :zoom_level => 16, :default_coordinates => [48.869267,2.3477251], :api_key => 'AIzaSyDIi_Y7sQ3WtRrysyF4A-zz75f8W2IhNYw'  %>
 
 	 <%= f.button :submit %>
 
