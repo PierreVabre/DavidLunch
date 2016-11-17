@@ -13,8 +13,11 @@ class AdressesController < ApplicationController
 
   def create
     @adresse = Adresse.create(adresse_params)
-    @adresse.save
- 	  redirect_to adress_path @adresse
+    if @adresse.save
+ 	    redirect_to adress_path @adresse
+    else
+      render :new
+    end
   end
 
   def show

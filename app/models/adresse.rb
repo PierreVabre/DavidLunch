@@ -19,6 +19,6 @@
 
 class Adresse < ActiveRecord::Base
 	validates :title, presence: true
-	belongs_to :category
-	belongs_to :subcategory
+	belongs_to :category, optional: true
+	belongs_to :subcategory, optional: true
 end
