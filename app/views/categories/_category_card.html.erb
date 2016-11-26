@@ -1,7 +1,12 @@
 <% #nbr = Adresse.count %>
-
+<% numbre = Adresse.where(category_id: category.id).count %>
 <a class="category_card" href="<%= category_path category %>">
-	<span class="category_title">
-		<%= category.title %>
-	</span>
+		<%= category.title %> 
+		
+			<% if numbre != 0 %>
+				<span class="number">
+					<%= numbre %>
+				</span>
+			<% else %>
+			<% end %>
 </a>

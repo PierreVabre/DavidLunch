@@ -53,7 +53,20 @@ body{
 
 .container_header .connection{
 	float: right;
+	font-size: 14px;
+	margin-top: 10px;
 }
+
+.container_header .connection a
+{
+	color: #ababab;
+}
+
+.container_header .connection a:hover
+{
+	text-decoration: underline;
+}
+
 
 .container_header .new_adresse{
 	display: inline-block;
@@ -124,19 +137,26 @@ body{
 	margin-bottom: 20px;
 }
 
-
-.last_adresses_list{
-	width:55%;
+.last_adresses_list, .mister_lunch_list{
+	width:50%;
 	float: left;
-	padding-left: 20px;
-	padding-right: 20px;
+	margin-bottom: 50px;
 }
 
-.best_adresses_list{
-	width:45%;
-	float: left;
-	padding-left: 20px;
-	padding-right: 20px;
+.last_adresses_list h2, .mister_lunch_list h2{
+	border-bottom: solid 2px #ababab;
+	display: inline-block;
+	padding-bottom: 10px;
+	font-size: 14px;
+	margin-bottom: 40px;
+}
+
+.last_adresses_list h2{
+	border-color:#4CAF50;
+}
+
+.mister_lunch_list h2{
+	border-color:#FFC107;
 }
 
 
@@ -147,54 +167,92 @@ body{
 
 
 .adresse_card{
-	background-color: #009688;
+	/*background-color: #009688;*/
 	display: block;
 	max-width: 500px;
-	margin-bottom: 10px;
+	margin-bottom: 40px;
 }
 
 .adresse_card a{
 	text-decoration: none;
 }
 
-.adresse_infos{
-	padding: 30px;
-	color: #fff;
+.adresse_card .adresse_title{
+	color: #000;
+	font-size: 25px;
+	display: block;
+	font-weight: 700;
+	margin-bottom: 2px;
 }
 
-.adresse_infos .adresse_title{
-	color: #fff;
-	font-size: 16px;
-	display: block;
+.adresse_card .adresse_categories, .adresse_card .adresse_price{
 	margin-bottom: 10px;
-	font-weight: 500;
 }
 
 .adresse_card .adresse_categories{
 
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 300;
-	color: #B2DFDB;
+	color: #ababab;
 }
 
 .adresse_card .adresse_categories .category_title{
-	color: #B2DFDB;
+	color: #ababab;
 }
 
 .adresse_card .adresse_categories .category_title:hover{
 	text-decoration: underline;
 }
 
-.distance{
-	background-color: #B2DFDB;
-	height: 14px;
-	color: #009688;
-	font-size: 12px;
-	text-align: right;
-	padding-right: 4px;
+.adresse_card .adresse_price{
+
+}
+
+.adresse_card .adresse_price .price{
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.adresse_card .adresse_price .price_what{
+	font-size: 14px;
 }
 
 
+.distance_jauge{
+	width: 100%;
+	height: 7px;
+	border-radius: 15px;
+}
+
+.distance_jauge_level{
+	height: 7px;
+	color: #B2DFDB;
+	font-size: 12px;
+	text-align: right;
+	padding-right: 4px;
+	border-radius: 15px 0px 0px 15px;
+	float: left;
+}
+
+.distance_value{
+	float: left;
+}
+
+.last_adresses_list .distance_jauge{
+ 	background-color: #B9F6CA;
+}
+
+.last_adresses_list .distance_jauge_level{
+	background-color: #00C853;
+}
+
+.mister_lunch_list .distance_jauge{
+ 	background-color: #FFFF8D;
+}
+
+.mister_lunch_list .distance_jauge_level{
+ 	background-color: #FFD600;
+}
 /* ------------------------------------------------------- */
 /* ---------------------- CATEGORY CARD ------------------ */
 /* ------------------------------------------------------- */
@@ -212,6 +270,11 @@ body{
 	text-decoration: none;
 	font-weight: 300;
 	border-bottom: solid 4px #00ACC1;
+}
+
+.category_card .number{
+	color:#4DD0E1;
+	margin-left: 5px;
 }
 
 

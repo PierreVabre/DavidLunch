@@ -14,7 +14,15 @@
 
 <div class="section last_adresses_list">
 	<h2>Les dernières adresses</h2>
-	<% @adresses.each do |adresse| %>
+	<% @last_adresses.each do |adresse| %>
+		<%= render partial: "/adresses/adresse_card", locals: {adresse: adresse} %>
+	<% end %>
+	<div class="clearfix"></div>
+</div>
+
+<div class="section mister_lunch_list">
+	<h2>Lucky Lunch</h2>
+	<% @random_adresses.each do |adresse| %>
 		<%= render partial: "/adresses/adresse_card", locals: {adresse: adresse} %>
 	<% end %>
 	<div class="clearfix"></div>

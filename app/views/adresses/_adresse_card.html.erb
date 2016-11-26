@@ -1,9 +1,6 @@
 <a href="<%= adress_path adresse %>">
 	<div class="adresse_card">
-		<div class="adresse_infos">
-			<div class="adresse_title" href="<%= adress_path adresse %>">
-				<%= adresse.title %>
-			</div>
+			
 			<div class="adresse_categories">
 				<% if Category.exists?(adresse.category_id) %>
 					<% @category = Category.find(adresse.category_id) %>
@@ -16,7 +13,14 @@
 					</a>
 				<% end %>
 			</div>
-		</div>
+
+			<div class="adresse_title" href="<%= adress_path adresse %>">
+				<%= adresse.title %>
+			</div>
+
+			<div class="adresse_price">
+				<span class="price">10€</span> <span class="price_what">la pizza et la boisson</span>
+			</div>
 
 		<% if adresse.geocoded? %>
 			<% 
@@ -24,10 +28,15 @@
 			distance_jauge = distance_mile/0.4*100
 			distance_metres = (distance_mile*1.609)*1000
 			%>
+
+			<div class="distance_jauge">
+				<div class="distance_jauge_level" style="width:<%= distance_jauge %>%"></div>
+			</div>
+			<!-- <div class="distance"> <%= eval '%.0f' % distance_metres %>m</div> -->
+			
+
 		<% end %>
 
-		<div class="distance" style="width:<%= distance_jauge %>%">
-			<%= eval '%.0f' % distance_metres %>m
-		</div>
+		
 	</div>
 </a>

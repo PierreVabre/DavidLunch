@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DavidLunch</title>
+    <title>David Lunch</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -27,7 +27,7 @@
           <%= current_user.email %>
           <%= link_to('Se déconnecter', destroy_user_session_path, :method => :delete) %>
         <% else %>
-            <a href="http://localhost:3000/users/sign_up">S'inscrire</a> / <a href="http://localhost:3000/users/sign_in">Se connecter</a>
+            <a href="http://localhost:3000/users/sign_up">S'inscrire</a> - <a href="http://localhost:3000/users/sign_in">Se connecter</a>
         <% end %>
       </div>
   	</div>
