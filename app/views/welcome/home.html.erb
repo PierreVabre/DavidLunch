@@ -1,43 +1,26 @@
-<h1>David Lunch</h1>
+<div class="section section_site_title">
+	<h1 class="site_title">David Lunch</h1>
+</div>
 
-<br/><br/>
-<hr/>
-<h2>Les catégories</h2>
-<a href="<%= categories_path %>">Gérer les catégories</a>
-<br/><br/>
-<% @categories.each do |category| %>
-	<a class="category" href="<%= category_path category %>">
-		<span class="category_title">
-			<%= category.title %>
-		</span>
-	</a>
-<% end %>
-<div class="clearfix"></div>
+<div class="section section_categories_list">
+	<% @categories.each do |category| %>
+		<%= render partial: "/categories/category_card", locals: {category: category} %>
+	<% end %>
+	<div class="clearfix"></div>
+</div>
 
-<br/><br/>
-<hr/>
-<h2>Les adresses</h2>
-<a href="<%= adresses_path %>">Gérer les adresses</a>
-<br/><br/>
+<div class="section section_adresses_list">
+	<h2>Les dernières adresses ajoutées</h2>
+	<% @adresses.each do |adresse| %>
+		<%= render partial: "/adresses/adresse_card", locals: {adresse: adresse} %>
+	<% end %>
+	<div class="clearfix"></div>
+</div>
 
-
-<% @adresses.each do |adresse| %>
-	<div class="adresse_carte">
-		<a class="adresse_title" href="<%= adress_path adresse %>">
-			<%= adresse.title %>		
-		</a>
-		<br/>
-		<% @category = Category.find(adresse.category_id) %>
-		<a class="category_title" href="<%= category_path @category %>">
-			<%= @category.title %>
-		</a>
+<div class="section_full">
+	<div style='width: 100%;'>
+  		<div id="map" style='width: 100%; height: 400px;'></div>
 	</div>
-<% end %>
-
-<div class="clearfix"></div>
-
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
 
 <script type="text/javascript">
@@ -48,3 +31,5 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   handler.fitMapToBounds();
 });
 </script>
+<a href="<%= adresses_path %>">Gérer les adresses</a>
+<a href="<%= categories_path %>">Gérer les catégories</a>

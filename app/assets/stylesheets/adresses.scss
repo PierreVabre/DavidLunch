@@ -1,36 +1,3 @@
 // Place all the styles related to the adresses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.adresse_carte
-{
-	float:left;
-	background-color:pink;
-	padding:20px;
-	margin:1px;
-	display:bloc;
-}
-
-.category
-{
-	float:left;
-	background-color:#ccc;
-	padding:20px;
-	margin:1px;
-	display:bloc;
-}
-
-.clearfix
-{
-	clear:both
-}
-
-.adresse_carte .adresse_title
-{
-	font-weight:bold;
-}
-
-.adresse_carte .category_title
-{
-	font-size:12px;
-}

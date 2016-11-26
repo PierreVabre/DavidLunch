@@ -1,10 +1,16 @@
-<div class="adresse_carte">
-	<a class="adresse_title" href="<%= adress_path adresse %>">
-		<%= adresse.title %>		
-	</a>
-	<br/>
-	<% @category = Category.find(adresse.category_id) %>
-	<a class="category_title" href="<%= category_path @category %>">
-		<%= @category.title %>
-	</a>
-</div>
+	<div class="adresse_carte">
+		<a class="adresse_title" href="<%= adress_path adresse %>">
+			<%= adresse.title %>		
+		</a>
+		<br/>
+		<% if Category.exists?(adresse.category_id) %>
+			<% @category = Category.find(adresse.category_id) %>
+			<% @subcategory = Subcategory.find(adresse.subcategory_id) %>
+			<a class="category_title" href="<%= category_path @category %>">
+				<%= @category.title %> 
+			</a>/ 
+			<a class="category_title" href="<%= subcategory_path @subcategory %>">
+				<%= @subcategory.title %>
+			</a>
+		<% end %>
+	</div>

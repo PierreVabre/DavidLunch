@@ -1,0 +1,9 @@
+<a href="<%= adresses_path %>">retour à la liste des adresses</a>
+
+<h1><%= @category.title %></h1>
+<p>Description : <br/><%= @category.description %></p>
+
+<a href="<%= edit_category_path @category %>">Modifier cette catégorie</a>
+<%= link_to 'Supprimer cette catégorie', category_path(@category),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>

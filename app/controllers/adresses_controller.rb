@@ -2,9 +2,11 @@ class AdressesController < ApplicationController
 
   before_action :set_adresse, only: [:show, :edit, :destroy, :update]
 
+
   def index
   	@adresses = Adresse.all
     @categories = Category.all
+    @subcategories = Subcategory.all
   end
 
   def new
@@ -39,11 +41,12 @@ class AdressesController < ApplicationController
 
   private
     def adresse_params
-      params.require(:adresse).permit(:title, :description, :price, :credit_card, :time_to_go, :category_id, :latitude, :longitude)
+      params.require(:adresse).permit(:title, :description, :price, :credit_card, :time_to_go, :category_id, :latitude, :longitude, :subcategory_id)
     end
     def set_adresse
       @adresse = Adresse.find(params[:id])
       @category = Category.find(@adresse.category_id)
+      @subcategory = Subcategory.find(@adresse.subcategory_id)
     end
 end
 

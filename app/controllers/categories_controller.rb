@@ -16,6 +16,10 @@ class CategoriesController < ApplicationController
   		  redirect_to categories_path
   	end
 
+    def show
+    
+    end
+
   	def destroy
   		@category.destroy
   		redirect_to categories_path

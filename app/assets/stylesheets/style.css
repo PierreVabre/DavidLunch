@@ -1,0 +1,99 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/* ------------------------------------------------------- */
+/* ---------------------- GLOBAL ------------------------- */
+/* ------------------------------------------------------- */
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+.container{
+	width: 100%;
+}
+
+.container_header{
+	background-color: #fff;
+	padding: 20px;
+}
+
+.container_header .new_adresse{
+	display: inline-block;
+	background-color: #8BC34A;
+	text-decoration: none;
+	padding: 5px;
+	color: #fff;
+	font-size: 14px;
+	margin-left: 20px;
+}
+
+.container_body{
+	background-color: #f8f8f8;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.container_content{
+	background-color: #fff;
+	width: 80%;
+	max-width: 1500px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+}
+
+.section{
+	padding: 25px 50px 25px 50px;
+}
+
+.section_full{
+	width: 100%;
+}
+
+.section_categories_list{
+	text-align: center;
+	padding-left: 200px;
+	padding-right: 200px;
+}
+
+.section_site_title{
+	color: #000;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.section_site_title h1{
+	font-weight: 900;
+	font-size: 50px;
+}
+
+/* ------------------------------------------------------- */
+/* ---------------------- ADRESSE CARD ------------------- */
+/* ------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------- */
+/* ---------------------- CATEGORY CARD ------------------ */
+/* ------------------------------------------------------- */
+
+
+
+.category_card{
+	background-color:#00BCD4;
+	display: inline-block;
+	color: #fff;
+	padding: 10px 20px 10px 20px;
+	margin-right: 1px;
+	margin-left: 1px;
+	margin-bottom: 5px;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+
+
+

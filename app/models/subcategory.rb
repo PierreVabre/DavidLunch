@@ -17,7 +17,7 @@
 
 class Subcategory < ApplicationRecord
 
-	belongs_to :category
+	belongs_to :category, optional: true
 	has_many :adresses
 
 	#has_many :subcategory
