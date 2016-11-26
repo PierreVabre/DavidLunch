@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
   	def create
   	   @categorie = Category.new(categories_params)
   	   @categorie.save
-  		  redirect_to categories_path
+  		 redirect_to categories_path
   	end
 
     def show

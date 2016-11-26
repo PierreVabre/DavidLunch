@@ -1,5 +1,7 @@
 <a href="<%= adresses_path %>">retour à la liste des adresses</a>
 
+
+
 <h1><%= @adresse.title %></h1>
 <p>Catégorie : <br/><%= @category.title %> / <%= @subcategory.title %></p>
 <p>Description : <br/><%= @adresse.description %></p>
@@ -8,6 +10,10 @@
 <p>Accepte la carte bleue : <br/><%= @adresse.credit_card %></p>
 <p>Latitude : <br/><%= @adresse.latitude %></p>
 <p>Longitude : <br/><%= @adresse.longitude %></p>
+<hr/>
+<%= @adresse.inspect %>
+<hr/>
+
 
 <a href="<%= edit_adress_path @adresse %>">Modifier cette adresse</a>
 <%= link_to 'Supprimer cette adresse', adress_path(@adresse),

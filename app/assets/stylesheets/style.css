@@ -1,38 +1,82 @@
-*{
-	padding: 0;
-	margin: 0;
-}
-
 /* ------------------------------------------------------- */
 /* ---------------------- GLOBAL ------------------------- */
 /* ------------------------------------------------------- */
 
+*{
+	padding: 0;
+	margin: 0;
+	  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          text-decoration: none;
+}
+
+.clearfix
+{
+	clear: both;
+}
+
 body{
 	font-family: 'Roboto', sans-serif;
+	background-color: #e0e0e0;
 }
 
 .container{
 	width: 100%;
 }
 
+
+/* ------------------------------------------------------- */
+/* ---------------------- HEADER ------------------------- */
+/* ------------------------------------------------------- */
+
 .container_header{
 	background-color: #fff;
-	padding: 20px;
+	padding: 15px 20px 10px 20px;
+	position: fixed;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+}
+
+.container_header .site_title{
+	font-weight: 700;
+	color: #000;
+	text-decoration: none;
+	display: inline-block;
+	padding-left: 35px;
+	padding-top: 7px;
+	height: 40px;
+	background-image: url(hungry.png);
+	background-size: 27px;
+	background-repeat: no-repeat;
+
+}
+
+.container_header .connection{
+	float: right;
 }
 
 .container_header .new_adresse{
 	display: inline-block;
-	background-color: #8BC34A;
+	background-color: #00BCD4;
+	border-bottom: solid 4px #00ACC1;
 	text-decoration: none;
-	padding: 5px;
+	padding: 5px 10px 3px 10px;
+	font-weight: 400;
 	color: #fff;
 	font-size: 14px;
 	margin-left: 20px;
 }
 
+
+
+/* ------------------------------------------------------- */
+/* ---------------------- HOME --------------------------- */
+/* ------------------------------------------------------- */
+
+
 .container_body{
-	background-color: #f8f8f8;
-	padding-top: 50px;
+	
+	padding-top: 150px;
 	padding-bottom: 50px;
 }
 
@@ -40,6 +84,7 @@ body{
 	background-color: #fff;
 	width: 80%;
 	max-width: 1500px;
+	min-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 20px;
@@ -57,6 +102,7 @@ body{
 	text-align: center;
 	padding-left: 200px;
 	padding-right: 200px;
+	padding-bottom: 50px;
 }
 
 .section_site_title{
@@ -70,10 +116,83 @@ body{
 	font-size: 50px;
 }
 
+.section_site_title .logo{
+	margin-top: 35px;
+}
+
+.section h2{
+	margin-bottom: 20px;
+}
+
+
+.last_adresses_list{
+	width:55%;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.best_adresses_list{
+	width:45%;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
 /* ------------------------------------------------------- */
 /* ---------------------- ADRESSE CARD ------------------- */
 /* ------------------------------------------------------- */
 
+
+
+.adresse_card{
+	background-color: #009688;
+	display: block;
+	max-width: 500px;
+	margin-bottom: 10px;
+}
+
+.adresse_card a{
+	text-decoration: none;
+}
+
+.adresse_infos{
+	padding: 30px;
+	color: #fff;
+}
+
+.adresse_infos .adresse_title{
+	color: #fff;
+	font-size: 16px;
+	display: block;
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+
+.adresse_card .adresse_categories{
+
+	font-size: 12px;
+	font-weight: 300;
+	color: #B2DFDB;
+}
+
+.adresse_card .adresse_categories .category_title{
+	color: #B2DFDB;
+}
+
+.adresse_card .adresse_categories .category_title:hover{
+	text-decoration: underline;
+}
+
+.distance{
+	background-color: #B2DFDB;
+	height: 14px;
+	color: #009688;
+	font-size: 12px;
+	text-align: right;
+	padding-right: 4px;
+}
 
 
 /* ------------------------------------------------------- */
@@ -86,12 +205,13 @@ body{
 	background-color:#00BCD4;
 	display: inline-block;
 	color: #fff;
-	padding: 10px 20px 10px 20px;
+	padding: 10px 20px 6px 20px;
 	margin-right: 1px;
 	margin-left: 1px;
 	margin-bottom: 5px;
 	text-decoration: none;
-	font-weight: 400;
+	font-weight: 300;
+	border-bottom: solid 4px #00ACC1;
 }
 
 

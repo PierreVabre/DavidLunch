@@ -10,16 +10,13 @@ class AdressesController < ApplicationController
   end
 
   def new
-    @adresse = Adresse.new
+      @adresse = Adresse.new
   end
 
   def create
-    @adresse = Adresse.create(adresse_params)
-    if @adresse.save
- 	    redirect_to adress_path @adresse
-    else
-      render :new
-    end
+    @adresse = Adresse.new(adresses_params)
+    @adresse.save
+ 	  redirect_to adresses_path
   end
 
   def show
@@ -40,7 +37,7 @@ class AdressesController < ApplicationController
   end
 
   private
-    def adresse_params
+    def adresses_params
       params.require(:adresse).permit(:title, :description, :price, :credit_card, :time_to_go, :category_id, :latitude, :longitude, :subcategory_id)
     end
     def set_adresse

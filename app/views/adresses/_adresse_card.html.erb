@@ -1,16 +1,33 @@
-	<div class="adresse_carte">
-		<a class="adresse_title" href="<%= adress_path adresse %>">
-			<%= adresse.title %>		
-		</a>
-		<br/>
-		<% if Category.exists?(adresse.category_id) %>
-			<% @category = Category.find(adresse.category_id) %>
-			<% @subcategory = Subcategory.find(adresse.subcategory_id) %>
-			<a class="category_title" href="<%= category_path @category %>">
-				<%= @category.title %> 
-			</a>/ 
-			<a class="category_title" href="<%= subcategory_path @subcategory %>">
-				<%= @subcategory.title %>
-			</a>
+<a href="<%= adress_path adresse %>">
+	<div class="adresse_card">
+		<div class="adresse_infos">
+			<div class="adresse_title" href="<%= adress_path adresse %>">
+				<%= adresse.title %>
+			</div>
+			<div class="adresse_categories">
+				<% if Category.exists?(adresse.category_id) %>
+					<% @category = Category.find(adresse.category_id) %>
+					<% @subcategory = Subcategory.find(adresse.subcategory_id) %>
+					<a class="category_title" href="<%= category_path @category %>">
+						<%= @category.title %> 
+					</a>/ 
+					<a class="category_title" href="<%= subcategory_path @subcategory %>">
+						<%= @subcategory.title %>
+					</a>
+				<% end %>
+			</div>
+		</div>
+
+		<% if adresse.geocoded? %>
+			<% 
+			distance_mile = adresse.distance_from([48.869267,2.3477251]) 
+			distance_jauge = distance_mile/0.4*100
+			distance_metres = (distance_mile*1.609)*1000
+			%>
 		<% end %>
+
+		<div class="distance" style="width:<%= distance_jauge %>%">
+			<%= eval '%.0f' % distance_metres %>m
+		</div>
 	</div>
+</a>

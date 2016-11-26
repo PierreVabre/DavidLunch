@@ -22,4 +22,5 @@ class Adresse < ActiveRecord::Base
 	validates :title, presence: true
 	belongs_to :category, optional: true
 	belongs_to :subcategory, optional: true
+	reverse_geocoded_by :latitude, :longitude
 end

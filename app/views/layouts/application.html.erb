@@ -7,7 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
     <script src="//maps.google.com/maps/api/js?key=AIzaSyDIi_Y7sQ3WtRrysyF4A-zz75f8W2IhNYw"></script>
     <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
@@ -18,24 +18,18 @@
   <body>
     <div class="container container_header">
 
-      <span class="site_title"> David Lunch </span>
+      <a class="site_title" href="<%= welcome_home_url %>">David Lunch</a>
 
       <a class="new_adresse" href="<%= new_adress_path %>">Ajouter une adresse</a>
 
-      <% if user_signed_in? %>
-        <%= current_user.email %> --- 
-        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-      <% else %>
-          <!-- lien pour log in -->
-      <% end %>
-
-    	<% if notice %>
-    	  <p class="alert alert-success"><%= notice %></p>
-    	<% end %>
-    	<% if alert %>
-    	  <p class="alert alert-danger"><%= alert %></p>
-    	<% end %>
-
+      <div class="connection">
+        <% if user_signed_in? %>
+          <%= current_user.email %>
+          <%= link_to('Se déconnecter', destroy_user_session_path, :method => :delete) %>
+        <% else %>
+            <a href="http://localhost:3000/users/sign_up">S'inscrire</a> / <a href="http://localhost:3000/users/sign_in">Se connecter</a>
+        <% end %>
+      </div>
   	</div>
 
     <div class="container container_body">
