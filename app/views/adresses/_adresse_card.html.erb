@@ -19,13 +19,16 @@
 			</a>
 
 			<div class="adresse_price">
-				<span class="price">10€</span> <span class="price_what">la pizza et la boisson</span>
+				<span class="price"><%= adresse.price %>€</span> <span class="price_what"><%= adresse.price_detail %></span>
 			</div>
 
 		<% if adresse.geocoded? %>
 			<% 
 			distance_mile = adresse.distance_from([48.869267,2.3477251]) 
 			distance_jauge = distance_mile/0.4*100
+			if distance_jauge > 100
+				distance_jauge = 100
+			end
 			distance_metres = (distance_mile*1.609)*1000
 			%>
 

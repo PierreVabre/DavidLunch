@@ -3,11 +3,12 @@ class WelcomeController < ApplicationController
   end
   def home
   	@adresses = Adresse.all
-  	@last_adresses = Adresse.last(4)
+  	@last_adresses = Adresse.order(id: :desc).last(4)
     @random_adresses = Adresse.order("RANDOM()").limit(4)
     @categories = Category.all
   	@subcategories = Subcategory.all
-	 @hash = Gmaps4rails.build_markers(@adresses) do |adresse, marker|
+	  
+    @hash = Gmaps4rails.build_markers(@last_adresses) do |adresse, marker|
 	  marker.lat adresse.latitude
 	  marker.lng adresse.longitude
 	  marker.infowindow adresse.title

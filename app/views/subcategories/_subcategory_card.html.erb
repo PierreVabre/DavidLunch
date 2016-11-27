@@ -1,0 +1,21 @@
+<% #nbr = Adresse.count %>
+<% number = Adresse.where(subcategory_id: subcategory.id).count %>
+
+<a class="subcategory_bloc" href="<%= subcategory_path subcategory %>">
+
+	<img class="subcategory_gif" src="<%= subcategory.gif %>"/>
+
+	<div class="subcategory_card">
+
+		<%= subcategory.title %> 
+		
+			<% if number != 0 %>
+				<span class="number">
+					
+				</span>
+			<% else %>
+			<% end %>
+	</div>
+	<div class="clearfix">
+	</div>
+</a> 

@@ -29,7 +29,7 @@ class AdressesController < ApplicationController
   end
 
   def update
-    if @adresse.update(adresse_params)
+    if @adresse.update(adresses_params)
       redirect_to @adresse, notice: "adresse updatée"
     else
       render :edit
@@ -38,7 +38,7 @@ class AdressesController < ApplicationController
 
   private
     def adresses_params
-      params.require(:adresse).permit(:title, :description, :price, :credit_card, :time_to_go, :category_id, :latitude, :longitude, :subcategory_id)
+      params.require(:adresse).permit(:title, :description, :price, :price_detail, :credit_card, :time_to_go, :category_id, :latitude, :longitude, :subcategory_id)
     end
     def set_adresse
       @adresse = Adresse.find(params[:id])

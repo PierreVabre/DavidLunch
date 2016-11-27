@@ -12,6 +12,7 @@
 #  latitude       :string
 #  longitude      :string
 #  subcategory_id :integer
+#  price_detail   :string
 #
 # Indexes
 #

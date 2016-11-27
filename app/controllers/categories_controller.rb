@@ -18,7 +18,8 @@ class CategoriesController < ApplicationController
   	end
 
     def show
-    
+      @category_adresses = Adresse.order(id: :desc).where(category_id: @category.id)
+      @category_subcategories = Subcategory.order(id: :desc).where(category_id: @category.id)
     end
 
     def update

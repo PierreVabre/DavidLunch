@@ -26,6 +26,19 @@ body{
 }
 
 
+.back{
+	color: #000;
+	display: inline-block;
+	font-weight: 700;
+	margin-top: 30px;
+	margin-left: 30px;
+	background-image: url(back.png);
+	background-repeat: no-repeat;
+	background-size: 28px;
+	padding: 3px 0px 0px 30px;
+}
+
+
 /* ------------------------------------------------------- */
 /* ---------------------- HEADER ------------------------- */
 /* ------------------------------------------------------- */
@@ -59,14 +72,13 @@ body{
 
 .container_header .connection a
 {
-	color: #ababab;
+	color: #00BCD4;
 }
 
 .container_header .connection a:hover
 {
 	text-decoration: underline;
 }
-
 
 .container_header .new_adresse{
 	display: inline-block;
@@ -241,15 +253,15 @@ body{
 	min-width: 37px;
 }
 
-.last_adresses_list .distance_jauge{
+.last_adresses_list .distance_jauge, .categorie_adresses_list .distance_jauge{
  	background-color: #B9F6CA;
 }
 
-.last_adresses_list .distance_jauge_level{
+.last_adresses_list .distance_jauge_level, .categorie_adresses_list .distance_jauge_level{
 	background-color: #00C853;
 }
 
-.last_adresses_list .distance_value{
+.last_adresses_list .distance_value, .categorie_adresses_list .distance_value{
 	background-color: #00C853;
 }
 
@@ -269,33 +281,33 @@ body{
 /* ---------------------- CATEGORY CARD ------------------ */
 /* ------------------------------------------------------- */
 
-.category_bloc{
+.category_bloc, .subcategory_bloc{
 	margin-left: 3px;
 	display: inline-block;
 }
 
-.category_gif{
-	height: 50px;
+.category_gif, .subcategory_gif{
+	height: 60px;
 	float: left;
 }
 
-.category_card{
+.category_card, .subcategory_card{
 	background-color:#00BCD4;
 	display: inline-block;
 	float: left;
 	color: #fff;
-	padding: 15px 20px 6px 20px;
+	padding: 20px 20px 6px 20px;
 	margin-right: 1px;
 	margin-left: 0px;
 	margin-bottom: 5px;
-	height: 50px;
+	height: 60px;
 	text-decoration: none;
 	font-weight: 300;
 	border-bottom: solid 4px #00ACC1;
 }
 
-.category_card .number{
-	color:#4DD0E1;
+.category_card .number, .subcategory_card .number{
+	color:#E0F7FA;
 	margin-left: 5px;
 }
 
