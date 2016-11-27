@@ -14,9 +14,9 @@
 				<% end %>
 			</div>
 
-			<div class="adresse_title" href="<%= adress_path adresse %>">
+			<a href="<%= adress_path adresse %>" class="adresse_title" href="<%= adress_path adresse %>">
 				<%= adresse.title %>
-			</div>
+			</a>
 
 			<div class="adresse_price">
 				<span class="price">10€</span> <span class="price_what">la pizza et la boisson</span>
@@ -29,8 +29,12 @@
 			distance_metres = (distance_mile*1.609)*1000
 			%>
 
+	
+
 			<div class="distance_jauge">
-				<div class="distance_jauge_level" style="width:<%= distance_jauge %>%"></div>
+				<div class="distance_jauge_level" style="width:<%= distance_jauge %>%">
+					<div class="distance_value"> <%= eval '%.0f' % distance_metres %> m</div> 
+				</div>
 			</div>
 			<!-- <div class="distance"> <%= eval '%.0f' % distance_metres %>m</div> -->
 			
@@ -39,4 +43,3 @@
 
 		
 	</div>
-</a>

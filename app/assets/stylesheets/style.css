@@ -226,16 +226,19 @@ body{
 
 .distance_jauge_level{
 	height: 7px;
-	color: #B2DFDB;
-	font-size: 12px;
 	text-align: right;
-	padding-right: 4px;
 	border-radius: 15px 0px 0px 15px;
 	float: left;
+	min-width: 40px;
 }
 
 .distance_value{
-	float: left;
+	display: inline-block;
+	color: #fff;
+	font-size: 11px;
+	padding: 2px 5px 2px 5px;
+	border-radius: 3px;
+	min-width: 37px;
 }
 
 .last_adresses_list .distance_jauge{
@@ -246,6 +249,10 @@ body{
 	background-color: #00C853;
 }
 
+.last_adresses_list .distance_value{
+	background-color: #00C853;
+}
+
 .mister_lunch_list .distance_jauge{
  	background-color: #FFFF8D;
 }
@@ -253,20 +260,35 @@ body{
 .mister_lunch_list .distance_jauge_level{
  	background-color: #FFD600;
 }
+
+.mister_lunch_list .distance_value{
+	background-color: #FFD600;
+}
+
 /* ------------------------------------------------------- */
 /* ---------------------- CATEGORY CARD ------------------ */
 /* ------------------------------------------------------- */
 
+.category_bloc{
+	margin-left: 3px;
+	display: inline-block;
+}
 
+.category_gif{
+	height: 50px;
+	float: left;
+}
 
 .category_card{
 	background-color:#00BCD4;
 	display: inline-block;
+	float: left;
 	color: #fff;
-	padding: 10px 20px 6px 20px;
+	padding: 15px 20px 6px 20px;
 	margin-right: 1px;
-	margin-left: 1px;
+	margin-left: 0px;
 	margin-bottom: 5px;
+	height: 50px;
 	text-decoration: none;
 	font-weight: 300;
 	border-bottom: solid 4px #00ACC1;

@@ -1,12 +1,23 @@
 <% #nbr = Adresse.count %>
 <% numbre = Adresse.where(category_id: category.id).count %>
-<a class="category_card" href="<%= category_path category %>">
+
+
+
+<a class="category_bloc" href="<%= category_path category %>">
+
+	<img class="category_gif" src="<%= category.gif %>"/>
+
+	<div class="category_card">
+
 		<%= category.title %> 
 		
 			<% if numbre != 0 %>
 				<span class="number">
-					<%= numbre %>
+					
 				</span>
 			<% else %>
 			<% end %>
-</a>
+	</div>
+	<div class="clearfix">
+	</div>
+</a> 

@@ -2,8 +2,9 @@ class CategoriesController < ApplicationController
 	
 	before_action :set_category, only: [:show, :edit, :destroy, :update]
 
-	def index
+	  def index
   		@categories = Category.all
+      @adresses = Adresse.all
   	end
 
   	def new
@@ -20,6 +21,14 @@ class CategoriesController < ApplicationController
     
     end
 
+    def update
+      if @category.update(categories_params)
+        redirect_to @category, notice: "catégorie updatée"
+      else
+        render :edit
+      end
+    end
+
   	def destroy
   		@category.destroy
   		redirect_to categories_path
@@ -30,6 +39,6 @@ class CategoriesController < ApplicationController
   	    @category = Category.find(params[:id])
   	  end
   	  def categories_params
-  	    params.require(:category).permit(:title, :description, :parent)
+  	    params.require(:category).permit(:title, :description, :parent, :gif)
   	  end
 end
