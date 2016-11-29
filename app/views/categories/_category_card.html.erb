@@ -5,19 +5,9 @@
 
 <a class="category_bloc" href="<%= category_path category %>">
 
-	<img class="category_gif" src="<%= category.gif %>"/>
-
-	<div class="category_card">
+	<div class="category_card" style="background-image: url(<%= category.gif %>);">
 
 		<%= category.title %> 
 		
-			<% if numbre != 0 %>
-				<span class="number">
-					
-				</span>
-			<% else %>
-			<% end %>
-	</div>
-	<div class="clearfix">
 	</div>
 </a> 

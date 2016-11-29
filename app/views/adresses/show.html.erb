@@ -1,17 +1,8 @@
-<div class="section section_adresse_infos">
-	<a href="<%= adresses_path %>">retour à la liste des adresses</a>
+<a class="back" href="<%= category_path @category.id %>">RETOUR</a>
 
-	<h1 class="adresse_title"><%= @adresse.title %></h1>
-
-	<p>Catégorie : <br/><%= @category.title %> / <%= @subcategory.title %></p>
-	<p>Description : <br/><%= @adresse.description %></p>
-	<p>Prix : <br/><%= @adresse.price %></p>
-	<p>Accepte la carte bleue : <br/><%= @adresse.credit_card %></p>
-	<p>Latitude : <br/><%= @adresse.latitude %></p>
-	<p>Longitude : <br/><%= @adresse.longitude %></p>
-
+<div class="section section_site_title">
+	<h1 class="site_title"><%= @adresse.title %></h1>
 </div>
-
 
 
 

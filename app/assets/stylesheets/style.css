@@ -18,13 +18,11 @@
 
 body{
 	font-family: 'Roboto', sans-serif;
-	background-color: #e0e0e0;
 }
 
 .container{
 	width: 100%;
 }
-
 
 .back{
 	color: #000;
@@ -61,7 +59,6 @@ body{
 	background-image: url(hungry.png);
 	background-size: 27px;
 	background-repeat: no-repeat;
-
 }
 
 .container_header .connection{
@@ -125,8 +122,6 @@ body{
 
 .section_categories_list{
 	text-align: center;
-	padding-left: 200px;
-	padding-right: 200px;
 	padding-bottom: 50px;
 }
 
@@ -182,7 +177,7 @@ body{
 	/*background-color: #009688;*/
 	display: block;
 	max-width: 500px;
-	margin-bottom: 40px;
+	margin-bottom: 60px;
 }
 
 .adresse_card a{
@@ -239,7 +234,7 @@ body{
 .distance_jauge_level{
 	height: 7px;
 	text-align: right;
-	border-radius: 15px 0px 0px 15px;
+	border-radius: 15px;
 	float: left;
 	min-width: 40px;
 }
@@ -254,7 +249,7 @@ body{
 }
 
 .last_adresses_list .distance_jauge, .categorie_adresses_list .distance_jauge{
- 	background-color: #B9F6CA;
+ 	/*background-color: #B9F6CA;*/
 }
 
 .last_adresses_list .distance_jauge_level, .categorie_adresses_list .distance_jauge_level{
@@ -266,7 +261,7 @@ body{
 }
 
 .mister_lunch_list .distance_jauge{
- 	background-color: #FFFF8D;
+ 	/*background-color: #FFFF8D;*/
 }
 
 .mister_lunch_list .distance_jauge_level{
@@ -280,6 +275,38 @@ body{
 /* ------------------------------------------------------- */
 /* ---------------------- CATEGORY CARD ------------------ */
 /* ------------------------------------------------------- */
+
+
+.category_bloc, .subcategory_bloc{
+	margin-left: 3px;
+	display: inline-block;
+}
+
+.category_card, .subcategory_card{
+	background-color:#00BCD4;
+	display: inline-block;
+	float: left;
+	color: #fff;
+	padding: 40px 80px 40px 80px;
+	margin-right: 1px;
+	margin-left: 0px;
+	margin-bottom: 5px;
+	font-size: 25px;
+	text-decoration: none;
+	font-weight: 400;
+	letter-spacing: 1px;
+	border-bottom: solid 0px #00ACC1;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.77);
+	background-size: 150%;
+	background-position: center;
+}
+
+.category_card .number, .subcategory_card .number{
+	color:#E0F7FA;
+	margin-left: 5px;
+}
+
+/*
 
 .category_bloc, .subcategory_bloc{
 	margin-left: 3px;
@@ -310,6 +337,8 @@ body{
 	color:#E0F7FA;
 	margin-left: 5px;
 }
+
+*/
 
 
 

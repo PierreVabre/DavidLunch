@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
   end
   def home
   	@adresses = Adresse.all
-  	@last_adresses = Adresse.order(id: :desc).last(4)
+  	@last_adresses = Adresse.order(id: :asc).last(4)
     @random_adresses = Adresse.order("RANDOM()").limit(4)
     @categories = Category.all
   	@subcategories = Subcategory.all
