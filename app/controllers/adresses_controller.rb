@@ -1,5 +1,5 @@
 class AdressesController < ApplicationController
-
+  before_action :authenticate_user!, only: [:edit, :new, :destroy, :update]
   before_action :set_adresse, only: [:show, :edit, :destroy, :update]
 
 
@@ -29,6 +29,9 @@ class AdressesController < ApplicationController
   end
 
   def update
+
+    
+    
     if @adresse.update(adresses_params)
       redirect_to @adresse, notice: "adresse updatée"
     else

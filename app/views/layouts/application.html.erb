@@ -20,14 +20,13 @@
 
       <a class="site_title" href="<%= welcome_home_url %>">David Lunch</a>
 
-      <a class="new_adresse" href="<%= new_adress_path %>">Ajouter une adresse</a>
-
       <div class="connection">
+        <a class="new_adresse" href="<%= new_adress_path %>">Ajouter une adresse</a>
+
         <% if user_signed_in? %>
-          <%= current_user.email %>
-          <%= link_to('Se déconnecter', destroy_user_session_path, :method => :delete) %>
+          <%= link_to('Se déconnecter', destroy_user_session_path, :method => :delete, :class=> "connection_link") %>
         <% else %>
-            <a href="http://localhost:3000/users/sign_up">S'inscrire</a> - <a href="http://localhost:3000/users/sign_in">Se connecter</a>
+            <a class="connection_link" href="http://localhost:3000/users/sign_up">S'inscrire</a><a class="connection_link" href="http://localhost:3000/users/sign_in">Se connecter</a>
         <% end %>
       </div>
   	</div>
