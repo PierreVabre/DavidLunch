@@ -2,10 +2,9 @@
 <% number = Adresse.where(subcategory_id: subcategory.id).count %>
 
 <a class="subcategory_bloc" href="<%= subcategory_path subcategory %>">
-
 	<div class="subcategory_card" style="background-image: url(<%= subcategory.gif %>);">
-
-		<%= subcategory.title %> 
-		
+		<div class="subcategory_title">
+			<%= subcategory.title %> 
+		</div>
 	</div>
 </a> 

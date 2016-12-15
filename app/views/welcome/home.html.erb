@@ -1,8 +1,10 @@
+<div class="section_site_gif" style="background-image: url(<%= @randomsubcategory.gif %>)">
+  <h1>David Lunch</h1>
+
+</div>
+
 <div class="section section_site_title">
-	<h1 class="site_title">David Lunch</h1>
-
 	<%= image_tag("hungry.png", :width => "50px", :class => "logo") %>
-
 </div>
 
 <div class="section section_categories_list">
@@ -12,20 +14,22 @@
 	<div class="clearfix"></div>
 </div>
 
-<div class="section last_adresses_list">
-	<h2>Les dernières adresses</h2>
-	<% @last_adresses.each do |adresse| %>
-		<%= render partial: "/adresses/adresse_card", locals: {adresse: adresse} %>
-	<% end %>
-	<div class="clearfix"></div>
-</div>
+<div class="section section_content">
+  <div class="last_adresses_list">
+  	<h2>Les dernières adresses</h2>
+  	<% @last_adresses.each do |adresse| %>
+  		<%= render partial: "/adresses/adresse_card", locals: {adresse: adresse} %>
+  	<% end %>
+  	<div class="clearfix"></div>
+  </div>
 
-<div class="section mister_lunch_list">
-	<h2>Lucky Lunch</h2>
-	<% @random_adresses.each do |adresse| %>
-		<%= render partial: "/adresses/adresse_card", locals: {adresse: adresse} %>
-	<% end %>
-	<div class="clearfix"></div>
+  <div class="mister_lunch_list">
+  	<h2>Lucky Lunch</h2>
+  	<% @random_adresses.each do |adresse| %>
+  		<%= render partial: "/adresses/adresse_card", locals: {adresse: adresse} %>
+  	<% end %>
+  	<div class="clearfix"></div>
+  </div>
 </div>
 
 <!-- <div class="section">

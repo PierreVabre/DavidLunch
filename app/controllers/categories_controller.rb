@@ -18,7 +18,23 @@ class CategoriesController < ApplicationController
   	end
 
     def show
+
       @category_adresses = Adresse.order(id: :desc).where(category_id: @category.id)
+      @tri =  params[:tri]
+
+      if @tri == "id"
+         @category_adresses = Adresse.order(id: :desc).where(category_id: @category.id)
+      end
+      if @tri == "distance"
+        @category_adresses = Adresse.order(distance: :desc).where(category_id: @category.id)
+      end
+      if @tri == "price"
+        @category_adresses = Adresse.order(price: :asc).where(category_id: @category.id)
+      end
+      if @tri == "title"
+        @category_adresses = Adresse.order(title: :asc).where(category_id: @category.id)
+      end
+
       @category_subcategories = Subcategory.order(title: :asc).where(category_id: @category.id)
     end
 

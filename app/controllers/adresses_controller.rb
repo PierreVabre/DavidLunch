@@ -29,9 +29,6 @@ class AdressesController < ApplicationController
   end
 
   def update
-
-    
-    
     if @adresse.update(adresses_params)
       redirect_to @adresse, notice: "adresse updatée"
     else

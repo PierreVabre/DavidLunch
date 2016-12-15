@@ -13,6 +13,7 @@
 #  longitude      :string
 #  subcategory_id :integer
 #  price_detail   :string
+#  distance       :integer
 #
 # Indexes
 #

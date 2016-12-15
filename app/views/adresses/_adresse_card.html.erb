@@ -20,7 +20,7 @@
 
 			<div class="adresse_price">
 				<span class="price"><%= adresse.price %>€</span> <span class="price_what"><%= adresse.price_detail %></span>
-				<a target="blank" href="https://www.google.fr/maps/dir/af83,+15+Rue+Poissonni%C3%A8re,+75002+Paris/'<%= adresse.latitude %>,<%= adresse.longitude %>'/@48.8700547,2.3458111,17z/data=!3m1!4b1!4m11!4m10!1m5!1m1!1s0x47e66e1650f28687:0xe4c0c4ee9aaa7800!2m2!1d2.3477251!2d48.869267!1m3!2m2!1d2.3477268!2d48.8708406">GO</a>
+				<a target="blank" href="https://www.google.fr/maps/dir/af83,+15+Rue+Poissonni%C3%A8re,+75002+Paris/'<%= adresse.latitude %>,<%= adresse.longitude %>'/@48.8700547,2.3458111,17z/data=!3m1!4b1!4m11!4m10!1m5!1m1!1s0x47e66e1650f28687:0xe4c0c4ee9aaa7800!2m2!1d2.3477251!2d48.869267!1m3!2m2!1d2.3477268!2d48.8708406">x</a>
 			</div>
 
 			<% if adresse.geocoded? %>
@@ -32,6 +32,8 @@
 			distance_metres = (distance_mile*1.609)*1000
 			distance_minutes = distance_metres*0.013
 			%>
+
+
 
 			<div class="distance_jauge">
 				<div class="distance_jauge_level" style="width:<%= distance_jauge %>%">

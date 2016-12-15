@@ -36,6 +36,16 @@ body{
 	padding: 3px 0px 0px 30px;
 }
 
+.section_site_gif{
+	background-image: url(http://i.giphy.com/GkzJ2rw3ca8KI.gif);
+	background-color: #4DD0E1;
+    padding-top: 200px;
+    padding-bottom: 180px;
+    text-align: center;
+    font-size: 60px;
+    background-size: cover;
+    color: #fff;
+}
 
 /* ------------------------------------------------------- */
 /* ---------------------- HEADER ------------------------- */
@@ -45,8 +55,9 @@ body{
 	background-color: #fff;
 	/*background-image: url(http://i.giphy.com/GkzJ2rw3ca8KI.gif);*/
 	padding: 20px 20px 14px 17px;
-	/*position: fixed;
-	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);*/
+	position: fixed;
+	z-index: 999;
+	/*box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);*/
 	background-size: cover;
 	background-position: center;
 }
@@ -128,12 +139,13 @@ body{
 
 .container_content{
 	background-color: #fff;
-	width: 80%;
-	max-width: 1500px;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 20px;
 }
+
+
 
 .section{
 	padding: 25px 50px 25px 50px;
@@ -143,9 +155,22 @@ body{
 	width: 100%;
 }
 
-.section_categories_list{
+.section_content{
+	width: 80%;
+	max-width: 1500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section_categories_list, .section_usecases_list{
 	text-align: center;
+	padding-top: 60px;
 	padding-bottom: 50px;
+	padding-left: 60px;
+	padding-right: 60px;
+	max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section_site_title{
@@ -168,9 +193,14 @@ body{
 }
 
 .last_adresses_list, .mister_lunch_list{
-	width:50%;
+	width:47%;
+	text-align: left;
 	float: left;
 	margin-bottom: 50px;
+}
+
+.mister_lunch_list{
+	margin-left: 6%;
 }
 
 .last_adresses_list h2, .mister_lunch_list h2{
@@ -182,11 +212,13 @@ body{
 }
 
 .last_adresses_list h2{
-	border-color:#4CAF50;
+	/*border-color:#4CAF50;*/
+	border-color:#4DD0E1;
 }
 
 .mister_lunch_list h2{
-	border-color:#FFC107;
+	/*border-color:#FFC107;*/
+	border-color:#4DD0E1;
 }
 
 
@@ -259,6 +291,8 @@ body{
 	text-align: right;
 	border-radius: 15px;
 	float: left;
+	background-size: cover;
+	background-position: center;
 	min-width: 40px;
 }
 
@@ -276,11 +310,14 @@ body{
 }
 
 .last_adresses_list .distance_jauge_level, .categorie_adresses_list .distance_jauge_level{
-	background-color: #00C853;
+	/*background-color: #00C853;*/
+	background-color: #4DD0E1;
+	/*background-image: url(http://i.giphy.com/GkzJ2rw3ca8KI.gif);*/
 }
 
 .last_adresses_list .distance_value, .categorie_adresses_list .distance_value{
-	background-color: #00C853;
+	/*background-color: #00C853;*/
+	background-color: #4DD0E1;
 }
 
 .mister_lunch_list .distance_jauge{
@@ -288,11 +325,18 @@ body{
 }
 
 .mister_lunch_list .distance_jauge_level{
- 	background-color: #FFD600;
+ 	/*background-color: #FFD600;*/
+ 	background-color: #4DD0E1;
 }
 
 .mister_lunch_list .distance_value{
-	background-color: #FFD600;
+	/*background-color: #FFD600;*/
+	background-color: #4DD0E1;
+}
+
+.tri{
+	margin-bottom:50px;
+	text-align: center;
 }
 
 /* ------------------------------------------------------- */
@@ -307,10 +351,14 @@ body{
 
 .category_card, .subcategory_card{
 	background-color:#00BCD4;
-	display: inline-block;
+	background-size: 250%;
+	background-position: center;
+	display: flex;
 	float: left;
 	color: #fff;
-	padding: 40px 80px 40px 80px;
+	width: 200px;
+	height: 200px;
+	padding: 20px 20px 20px 20px;
 	margin-right: 0px;
 	margin-left: 0px;
 	margin-bottom: 0px;
@@ -318,16 +366,27 @@ body{
 	text-decoration: none;
 	font-weight: 400;
 	letter-spacing: 1px;
+	vertical-align: middle;
 	border-bottom: solid 0px #00ACC1;
 	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.77);
-	background-size: 150%;
-	background-position: center;
+	opacity: 1;
+	transition: opacity 0.2s ease;
+}
+
+.category_card .category_title, .subcategory_card .subcategory_title{
+	margin:auto;
 }
 
 .category_card .number, .subcategory_card .number{
 	color:#E0F7FA;
 	margin-left: 5px;
 }
+
+.category_card:hover, .subcategory_card:hover{
+	opacity: 0.8;
+	transition: opacity 0.2s ease;
+}
+
 
 /*
 
@@ -362,6 +421,46 @@ body{
 }
 
 */
+
+/* ------------------------------------------------------- */
+/* ---------------------- TRI ---------------------------- */
+/* ------------------------------------------------------- */
+
+.tri{
+
+	margin-bottom: 100px;
+	clear: both;
+}
+
+.tri .label{
+	float: left;
+	padding: 5px 10px 5px 0px;
+	color: #000;
+}
+
+.tri a{
+	margin-right: 5px;
+	display: block;
+	float: left;
+	border-bottom: solid 4px #00E676;
+	text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    font-weight: 300;
+    color: #00E676;
+    font-size: 14px;
+}
+
+.tri a:hover{
+	border-color: #00C853;
+	color: #00C853;
+}
+
+.tri .active{
+	background-color: #B9F6CA;
+	border-color: #00C853;
+	color: #00C853;
+	border-radius: 2px;
+}
 
 
 
