@@ -1,0 +1,25 @@
+<a href="<%= welcome_home_url %>">RETOUR</a>
+
+<h1>Gestion des usecases</h1>
+
+<a href="<%= new_usecase_path %>">Ajouter un nouveau usecase</a>
+
+<br/><br/>
+
+<% @usecases.each do |usecase| %>
+	
+	<a class="" href="<%= usecase_path usecase %>">
+		<span class="usecase_title">
+			<%= usecase.title %>
+		</span>
+	</a>
+	-
+	<a href="<%= edit_usecase_path(usecase.id) %>">
+		Modifier
+	</a>
+	 - 
+	<%= link_to 'Supprimer', usecase_path(usecase.id),
+              method: :delete,
+              data: { confirm: 'Ca risque de foutre le bordel man' } %>
+   	<br/>
+<% end %>

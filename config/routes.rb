@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   resources 'adresses'#, only: [:index, :show, :create, :new, :destroy, :edit]
   resources 'categories'#, only: [:index, :show, :create, :new, :destroy, :edit]
   resources 'subcategories'#, only: [:index, :show, :create, :new, :destroy, :edit]
+  resources 'usecases'#, only: [:index, :show, :create, :new, :destroy, :edit]
   get 'pages/home'
   get 'welcome/home'
   root 'welcome#home'

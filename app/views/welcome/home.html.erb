@@ -11,6 +11,9 @@
 	<% @categories.each do |category| %>
 		<%= render partial: "/categories/category_card", locals: {category: category} %>
 	<% end %>
+  <% @usecases.each do |usecase| %>
+    <%= render partial: "/usecases/usecase_card", locals: {usecase: usecase} %>
+  <% end %>
 	<div class="clearfix"></div>
 </div>
 

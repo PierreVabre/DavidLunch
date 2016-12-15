@@ -1,0 +1,13 @@
+<a href="<%= usecases_path %>">RETOUR</a>
+
+<h1>Ajouter un usecase</h1>
+
+<%= simple_form_for @usecase do |f| %>
+
+	 <%= f.input :title, label: 'Nom : ', error: 'obligatoire', required: true %>
+
+	 <%= f.input :gif, label: 'URL Giphy.gif : ' %>
+
+	 <%= f.button :submit %>
+
+<% end %>

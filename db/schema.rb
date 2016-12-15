@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201141525) do
+ActiveRecord::Schema.define(version: 20161215100133) do
 
   create_table "adresses", force: :cascade do |t|
     t.string  "title"
@@ -48,6 +48,13 @@ ActiveRecord::Schema.define(version: 20161201141525) do
     t.integer  "category"
     t.string   "gif"
     t.index ["category"], name: "index_subcategories_on_category"
+  end
+
+  create_table "usecases", force: :cascade do |t|
+    t.string   "title"
+    t.string   "gif"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
