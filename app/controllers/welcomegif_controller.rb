@@ -1,0 +1,3 @@
+class WelcomegifController < ApplicationController
+	
+end
