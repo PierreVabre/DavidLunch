@@ -1,0 +1,23 @@
+<a href="<%= welcome_home_url %>">RETOUR</a>
+
+<h1>Gestion des welcomegifs</h1>
+
+<a href="<%= new_welcomegif_path %>">Ajouter un nouveau welcomegif</a>
+
+<br/><br/>
+
+<% @welcomegifs.each do |welcomegif| %>
+	
+	<a class="" href="<%= welcomegif_path welcomegif %>">
+		<img src="<%= welcomegif.gif %>" height="100"/>
+	</a>
+	-
+	<a href="<%= edit_welcomegif_path(welcomegif.id) %>">
+		Modifier
+	</a>
+	 - 
+	<%= link_to 'Supprimer', welcomegif_path(welcomegif.id),
+              method: :delete,
+              data: { confirm: 'Ca risque de foutre le bordel man' } %>
+   	<br/>
+<% end %>

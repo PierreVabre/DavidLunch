@@ -1,0 +1,13 @@
+<a href="<%= welcomegifs_path %>">RETOUR</a>
+
+<h1>Modifier un welcomegif</h1>
+
+<img src="<%= @welcomegif.gif %>" height="100"/>
+
+<%= simple_form_for @welcomegif do |f| %>
+
+	 <%= f.input :gif, label: 'URL Giphy.gif : ' %>
+
+	 <%= f.button :submit %>
+
+<% end %>

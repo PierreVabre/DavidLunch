@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
     @categories = Category.all
   	@subcategories = Subcategory.all
     @usecases = Usecase.all
-    @randomsubcategory = Subcategory.order("RANDOM()").first
+    @randomgif = Welcomegif.order("RANDOM()").first
 
     @hash = Gmaps4rails.build_markers(@last_adresses) do |adresse, marker|
 	  marker.lat adresse.latitude

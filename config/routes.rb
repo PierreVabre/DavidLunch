@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   resources 'categories'#, only: [:index, :show, :create, :new, :destroy, :edit]
   resources 'subcategories'#, only: [:index, :show, :create, :new, :destroy, :edit]
   resources 'usecases'#, only: [:index, :show, :create, :new, :destroy, :edit]
+  resources 'welcomegifs'#, only: [:index, :show, :create, :new, :destroy, :edit]
   get 'pages/home'
   get 'welcome/home'
   root 'welcome#home'
