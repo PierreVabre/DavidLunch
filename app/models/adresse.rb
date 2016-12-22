@@ -14,6 +14,7 @@
 #  subcategory_id :integer
 #  price_detail   :string
 #  distance       :integer
+#  usecase_id     :integer
 #
 # Indexes
 #
@@ -24,5 +25,6 @@ class Adresse < ActiveRecord::Base
 	validates :title, presence: true
 	belongs_to :category, optional: true
 	belongs_to :subcategory, optional: true
+	belongs_to :usecase, optional: true
 	reverse_geocoded_by :latitude, :longitude
 end

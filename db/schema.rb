@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219150727) do
+ActiveRecord::Schema.define(version: 20161221094652) do
 
   create_table "adresses", force: :cascade do |t|
     t.string  "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20161219150727) do
     t.integer "subcategory_id"
     t.string  "price_detail"
     t.integer "distance"
+    t.integer "usecase_id"
     t.index ["category_id"], name: "index_adresses_on_category_id"
   end
 

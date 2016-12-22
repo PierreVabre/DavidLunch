@@ -1,5 +1,5 @@
 class SubcategoriesController < ApplicationController
-
+  	before_action :authenticate_user!, only: [:edit, :new, :destroy, :update]
 	before_action :set_subcategory, only: [:show, :edit, :destroy, :update]
 
 	def index

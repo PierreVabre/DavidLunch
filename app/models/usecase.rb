@@ -10,4 +10,5 @@
 #
 
 class Usecase < ApplicationRecord
+	has_many :adresses
 end

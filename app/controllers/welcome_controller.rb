@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+  
+  before_action :authenticate_user!, only: [:edit, :new, :destroy, :update]
   def index
   end
   def home

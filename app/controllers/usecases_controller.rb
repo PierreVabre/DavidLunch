@@ -1,5 +1,5 @@
 class UsecasesController < ApplicationController
-
+  before_action :authenticate_user!, only: [:edit, :new, :destroy, :update]
 	before_action :set_usecase, only: [:show, :edit, :destroy, :update]
 
 	def index
