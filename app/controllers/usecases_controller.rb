@@ -16,8 +16,9 @@ class UsecasesController < ApplicationController
   		 redirect_to usecases_path
   	end
 
-  	def show
-  	end
+    def show
+      @usecase_adresses = @usecase.adresses
+    end
 
   	def update
       if @usecase.update(usecases_params)

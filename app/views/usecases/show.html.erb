@@ -1,0 +1,13 @@
+
+<a class="back" href="javascript:history.back()">RETOUR</a>
+
+<div class="section section_site_title">
+	<h1 class="site_title"><%= @usecase.title %></h1>
+</div>
+
+<div class="section categorie_adresses_list section_content">
+	<% @usecase_adresses.each do |adresse| %>
+		<%= render partial: "/adresses/adresse_card", locals: {adresse: adresse} %>
+	<% end %>
+	<div class="clearfix"></div>
+</div>

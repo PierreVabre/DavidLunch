@@ -12,6 +12,8 @@
 	 
 	 <%= f.association :subcategory, required: true %>
 
+	 <%= f.association :usecase, :as => :check_boxes %>
+
 	 <%= f.input :price %>
 
 	 <%= f.input :price_detail %>

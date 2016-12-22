@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161221094652) do
+ActiveRecord::Schema.define(version: 20161222091606) do
 
   create_table "adresses", force: :cascade do |t|
     t.string  "title"
@@ -24,8 +24,14 @@ ActiveRecord::Schema.define(version: 20161221094652) do
     t.integer "subcategory_id"
     t.string  "price_detail"
     t.integer "distance"
-    t.integer "usecase_id"
     t.index ["category_id"], name: "index_adresses_on_category_id"
+  end
+
+  create_table "adresses_usecases", id: false, force: :cascade do |t|
+    t.integer "adresse_id"
+    t.integer "usecase_id"
+    t.index ["adresse_id"], name: "index_adresses_usecases_on_adresse_id"
+    t.index ["usecase_id"], name: "index_adresses_usecases_on_usecase_id"
   end
 
   create_table "categories", force: :cascade do |t|
