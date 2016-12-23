@@ -28,7 +28,7 @@ body{
 	color: #000;
 	display: inline-block;
 	font-weight: 700;
-	margin-top: 30px;
+	margin-top: 80px;
 	margin-left: 30px;
 	background-image: url(back.png);
 	background-repeat: no-repeat;
@@ -167,8 +167,8 @@ body{
 	text-align: center;
 	padding-top: 60px;
 	padding-bottom: 50px;
-	padding-left: 60px;
-	padding-right: 60px;
+	/*padding-left: 60px;
+	padding-right: 60px;*/
 	/*max-width: 1000px;*/
     margin-left: auto;
     margin-right: auto;
@@ -183,6 +183,16 @@ body{
 .section_site_title h1{
 	font-weight: 900;
 	font-size: 50px;
+}
+
+.section_site_title .point{
+    width: 12px;
+    height: 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-left: 0px;
+    background-size: initial;
+    background-position: center;
 }
 
 .section_site_title .logo{
@@ -218,8 +228,8 @@ body{
 }
 
 .mister_lunch_list h2{
-	/*border-color:#FFC107;*/
-	border-color:#4DD0E1;
+	border-color:#FFC107;
+	/*border-color:#4DD0E1;*/
 }
 
 
@@ -326,18 +336,19 @@ body{
 }
 
 .mister_lunch_list .distance_jauge_level{
- 	/*background-color: #FFD600;*/
- 	background-color: #4DD0E1;
+ 	background-color: #FFD600;
+ 	/*background-color: #4DD0E1;*/
 }
 
 .mister_lunch_list .distance_value{
-	/*background-color: #FFD600;*/
-	background-color: #4DD0E1;
+	background-color: #FFD600;
+	/*background-color: #4DD0E1;*/
 }
 
 .tri{
 	margin-bottom:50px;
 	text-align: center;
+	display: none;
 }
 
 /* ------------------------------------------------------- */
@@ -463,6 +474,40 @@ body{
 	border-radius: 2px;
 }
 
+/* ----------------------------------------------------------------- */
+/* ---------------------- SHOW ADRESSE ----------------------------- */
+/* ----------------------------------------------------------------- */
 
+.go{
+	display: inline-block;
+	width: 100%;
+	height: 300px;
+	color: #0097A7;
+	font-size: 60px;
+	font-weight: 300;
+	background-color: #4DD0E1;
+	border-radius: 2px;
+	text-align: center;
+	margin-top: 50px;
+	padding-top: 110px;
+}
 
+.section_adresse_content
+{
+	width: 80%;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section_adresse_content h2{
+	font-size: 18px;
+	font-weight: 400;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.section_adresse_content h2 .adresse_title{
+	font-weight: 900;
+}
 

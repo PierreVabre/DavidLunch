@@ -2,7 +2,10 @@
 <a class="back" href="javascript:history.back()">RETOUR</a>
 
 <div class="section section_site_title">
-	<h1 class="site_title"><%= @category.title %></h1>
+	<h1 class="site_title"><%= @category.title %>
+		<div alt="ceci est un point gif" class="point" style="background-image: url(<%= @category.gif %>)"></div>
+	</h1>
+
 </div>
 
 <div class="section section_categories_list">

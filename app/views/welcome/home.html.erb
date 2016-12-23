@@ -28,9 +28,9 @@
 
   <div class="mister_lunch_list">
   	<h2>Lucky Lunch</h2>
-  	<% @random_adresses.each do |adresse| %>
-  		<%= render partial: "/adresses/adresse_card", locals: {adresse: adresse} %>
-  	<% end %>
+
+  		<%= render partial: "/adresses/adresse_card", locals: {adresse: @random_adresses} %>
+
   	<div class="clearfix"></div>
   </div>
 </div>
