@@ -38,6 +38,6 @@ class UsecasesController < ApplicationController
         @adresses = @usecase.adresses
   	  end
   	  def usecases_params
-  	    params.require(:usecase).permit(:title, :gif)
+  	    params.require(:usecase).permit(:title, :gif, :secondTitle)
   	  end
 end

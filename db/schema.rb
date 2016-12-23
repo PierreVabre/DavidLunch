@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161222091606) do
+ActiveRecord::Schema.define(version: 20161223154208) do
 
   create_table "adresses", force: :cascade do |t|
     t.string  "title"
@@ -60,8 +60,9 @@ ActiveRecord::Schema.define(version: 20161222091606) do
   create_table "usecases", force: :cascade do |t|
     t.string   "title"
     t.string   "gif"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "secondTitle"
   end
 
   create_table "users", force: :cascade do |t|

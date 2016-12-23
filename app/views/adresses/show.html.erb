@@ -16,10 +16,10 @@
 <div class="section section_adresse_content">
   <a class="go" target="blank" href="https://www.google.fr/maps/dir/af83,+15+Rue+Poissonni%C3%A8re,+75002+Paris/'<%= @adresse.latitude %>,<%= @adresse.longitude %>'/@48.8700547,2.3458111,17z/data=!3m1!4b1!4m11!4m10!1m5!1m1!1s0x47e66e1650f28687:0xe4c0c4ee9aaa7800!2m2!1d2.3477251!2d48.869267!1m3!2m2!1d2.3477268!2d48.8708406">Y aller en <%= eval '%.0f' % distance_minutes %> min</a>
 
-  <h2>David te recommande particulièrement <span class="adresse_title"><%= @adresse.title %></span> si</h2>
+  <h2>Va chez <span class="adresse_title"><%= @adresse.title %></span> si</h2>
 
   <% @usecases.each do |usecase| %>
-    <%= render partial: "/usecases/usecase_card", locals: {usecase: usecase} %>
+    <%= render partial: "/usecases/usecase_second_card", locals: {usecase: usecase} %>
   <% end %>
 
 </div>
