@@ -4,12 +4,11 @@
 	<h1 class="site_title"><%= @adresse.title %></h1>
 </div>
 
-
-
 <hr/>
 <%= @adresse.inspect %>
 <hr/>
-
+<%= @usecases.inspect %>
+<hr/>
 
 <a href="<%= edit_adress_path @adresse %>">Modifier cette adresse</a>
 <%= link_to 'Supprimer cette adresse', adress_path(@adresse),

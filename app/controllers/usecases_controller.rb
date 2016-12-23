@@ -11,13 +11,12 @@ class UsecasesController < ApplicationController
   	end
 
   	def create
-  	   @usecase = Usecase.new(usecases_params)
-  	   @usecase.save
-  		 redirect_to usecases_path
+  	  @usecase = Usecase.new(usecases_params)
+  	  @usecase.save
+  		redirect_to usecases_path
   	end
 
     def show
-      @usecase_adresses = @usecase.adresses
     end
 
   	def update
@@ -36,6 +35,7 @@ class UsecasesController < ApplicationController
   	private
   	  def set_usecase
   	    @usecase = Usecase.find(params[:id])
+        @adresses = @usecase.adresses
   	  end
   	  def usecases_params
   	    params.require(:usecase).permit(:title, :gif)

@@ -29,6 +29,8 @@ class AdressesController < ApplicationController
   end
 
   def update
+    @adresse.usecases.destroy_all
+    @adresse.usecases << @usecases
     if @adresse.update(adresses_params)
       redirect_to @adresse, notice: "adresse updatée"
     else
@@ -38,10 +40,11 @@ class AdressesController < ApplicationController
 
   private
     def adresses_params
-      params.require(:adresse).permit(:title, :description, :price, :price_detail, :credit_card, :time_to_go, :category_id, :latitude, :longitude, :subcategory_id)
+      params.require(:adresse).permit(:title, :description, :price, :price_detail, :credit_card, :time_to_go, :category_id, :latitude, :longitude, :subcategory_id, :usecase_ids => [])
     end
     def set_adresse
       @adresse = Adresse.find(params[:id])
+      @usecases = @adresse.usecases
       @category = Category.find(@adresse.category_id)
       @subcategory = Subcategory.find(@adresse.subcategory_id)
     end

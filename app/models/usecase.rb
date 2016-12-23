@@ -10,5 +10,5 @@
 #
 
 class Usecase < ApplicationRecord
-	has_and_belongs_to_many :adresses
+	has_and_belongs_to_many :adresses, class_name: 'Adresse'
 end
