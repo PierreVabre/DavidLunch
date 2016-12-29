@@ -363,7 +363,8 @@ body{
 
 .category_card, .subcategory_card{
 	background-color:#00BCD4;
-	background-size: 250%;
+	/*background-size: 250%;*/
+	background-size: cover;
 	background-position: center;
 	display: flex;
 	float: left;
@@ -479,6 +480,43 @@ body{
 /* ---------------------- SHOW ADRESSE ----------------------------- */
 /* ----------------------------------------------------------------- */
 
+.adresse_title{
+	margin-bottom: 50px;
+}
+
+.ligne_info{
+	margin-top: 10px;
+}
+
+.adresse_description{
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 21px;
+}
+
+.bold{
+	font-weight: 900;
+}
+
+.edit_adresse_btn{
+	display: inline-block;
+	background-color: #4DD0E1;
+	background-position: center;
+	border-bottom: solid 4px #00ACC1;
+	text-decoration: none;
+	padding: 5px 10px 5px 10px;
+	font-weight: 300;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 2px;
+	margin-top: 30px;
+}
+
+.edit_adresse_link{
+	color: #ccc;
+	font-weight: 300;
+}
 
 .adresse_map{
 	width: 100%;
@@ -505,12 +543,12 @@ body{
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 }
 
 .section_adresse_content h2{
 	font-size: 18px;
 	font-weight: 400;
-	margin-top: 30px;
 	margin-bottom: 30px;
 }
 
