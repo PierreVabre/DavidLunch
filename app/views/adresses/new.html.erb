@@ -1,29 +1,41 @@
-<a href="<%= adresses_path %>">RETOUR</a>
+<div class="page_form">
+	
 
-<h1>Ajouter une adresses</h1>
+	<a class="back" href="javascript:history.back()">RETOUR</a>
 
-<%= simple_form_for @adresse do |f| %>
+	<div class="section section_site_title">
+			<h1>Ajouter une adresse</h1>
+		</div>
 
-	 <%= f.input :title, label: 'Nom :', error: 'obligatoire' %>
+	<div class="section section_form">
 
-	 <%= f.input :description, label: 'Description :', error: 'obligatoire' %>
+	<%= simple_form_for @adresse do |f| %>
 
-	 <%= f.association :category, required: true %>
-	 
-	 <%= f.association :subcategory, required: true %>
+		<label for="adresse_title">NOM</label>
+		<%= f.input :title, label: false, required: true %>
 
-	 <%= f.association :usecases, :as => :check_boxes %>
+		<label for="adresse_description">DESCRIPTION</label>
+		<%= f.input :description, label: false %>
 
-	 <%= f.input :price %>
+		<label for="adresse_category">CATÉGORIE</label>
+		<%= f.association :category, label: false, required: true %>
+		 
+		<label for="adresse_subcategory">SOUS-CATÉGORIE</label>
+		<%= f.association :subcategory, label: false, required: true %>
 
-	 <%= f.input :price_detail %>
+		<label for="adresse_subcategory" class="label_with_margin">UNE BONNE ADRESSE SI</label>
+		<%= f.association :usecases, label: false, :as => :check_boxes %>
+		<div class="clearfix"></div>
 
-	 <%= f.input :time_to_go %>
+		<label for="adresse_price">PRIX (ex: 3€ les 24 huitres)</label>
+		<%= f.input :price, label: false %><div class="euro">€</div> <%= f.input :price_detail, label: false %>
+		<div class="clearfix"></div>
 
-	 <%= f.input :credit_card %>
+		<label for="gmap" class="label_with_margin">LOCALISATION</label>
+		 <%= f.gmap_coordinate_picker :lat_column => 'latitude', :lng_column => 'longitude' , :zoom_level => 16, :default_coordinates => [48.869267,2.3477251], :api_key => 'AIzaSyDIi_Y7sQ3WtRrysyF4A-zz75f8W2IhNYw'  %>
 
-	 <%= f.gmap_coordinate_picker :lat_column => 'latitude', :lng_column => 'longitude' , :zoom_level => 16, :default_coordinates => [48.869267,2.3477251], :api_key => 'AIzaSyDIi_Y7sQ3WtRrysyF4A-zz75f8W2IhNYw'  %>
+		 <%= f.button :submit %>
 
-	 <%= f.button :submit %>
-
-<% end %>
+	<% end %>
+	</div>
+</div>

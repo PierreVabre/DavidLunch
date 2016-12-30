@@ -135,7 +135,6 @@ body{
 .container_body{
 	
 	padding-top: 50px;
-	padding-bottom: 50px;
 }
 
 .container_content{
@@ -480,7 +479,7 @@ body{
 /* ---------------------- SHOW ADRESSE ----------------------------- */
 /* ----------------------------------------------------------------- */
 
-.adresse_title{
+.adressetitle{
 	margin-bottom: 50px;
 }
 
@@ -488,7 +487,7 @@ body{
 	margin-top: 10px;
 }
 
-.adresse_description{
+.description{
 	max-width: 500px;
 	margin-left: auto;
 	margin-right: auto;
@@ -552,7 +551,136 @@ body{
 	margin-bottom: 30px;
 }
 
-.section_adresse_content h2 .adresse_title{
+.section_adresse_content h2 .adressetitle{
 	font-weight: 900;
 }
+
+.icon{
+
+}
+
+/* ----------------------------------------------------------------- */
+/* --------------------- FORMS ADRESSE ----------------------------- */
+/* ----------------------------------------------------------------- */
+
+.page_form{
+	background-image: url(http://i.giphy.com/jmG9f3aumasGk.gif);
+	background-size: cover;
+	padding-bottom: 50px;
+	background-position: center top;
+	background-attachment: fixed;
+}
+
+.page_form h1{
+	color: #fff;
+}
+
+.section_form{
+	width: 80%;
+	max-width: 700px;
+	margin: auto;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+	margin-top: 50px;
+	background-color: #fff;
+	border-radius: 2px;
+}
+
+.section_form label{
+	font-size: 12px;
+	font-weight: 700;
+	display: block;
+	margin-top: 40px;
+}
+
+.section_form .label_with_margin{
+	margin-bottom: 10px;
+}
+
+.section_form .checkbox{
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.section_form .checkbox label{
+	display: inline;
+	font-weight: 400;
+	padding: 10px;
+	border: solid 2px #4DD0E1;
+	border-radius:2px;
+	display: block;
+	margin-top: 0px;
+}
+
+.section_form .check_boxes{
+	width: auto;
+	margin-right: 5px;
+	color: #4DD0E1;
+}
+
+.section_form input, .section_form textarea{
+	width: 100%;
+	padding: 5px 0px 10px 0px;
+	font-size: 20px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: solid 2px #4dd0e1;
+}
+
+.section_form textarea{
+
+}
+
+.section_form select{
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.section_form select option{
+	padding: 10px;
+}
+
+.section_form input:focus{
+	border-color: #4dd0e1;
+}
+
+.section_form #adresse_price{
+	width: 10%;
+	float: left;
+}
+
+.section_form .euro{
+	float: left;
+	width: 5%;
+	font-size: 20px;
+	padding-top: 5px;
+}
+
+.section_form #adresse_price_detail{
+	width: 85%;
+	float: left;
+}
+
+.section_form .gmap_coordinate_picker_container{
+	cursor: crosshair;
+}
+
+.section_form .btn{
+	width: auto;
+	display: block;
+    background-color: #4DD0E1;
+    background-position: center;
+    border-bottom: solid 4px #00ACC1;
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+    font-weight: 300;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 2px;
+}
+
 

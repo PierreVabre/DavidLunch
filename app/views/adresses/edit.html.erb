@@ -1,28 +1,47 @@
-<a href="<%= adress_path @adresse %>">retour</a>
+<div class="page_form">
+	
 
-<h1>Modifier : <%= @adresse.title %></h1>
+	<a class="back" href="javascript:history.back()">RETOUR</a>
 
-<%= simple_form_for @adresse do |f| %>
-	 <%= f.error_notification %>
+	<div class="section section_site_title">
+			<h1>Modifier : <%= @adresse.title %></h1>
+		</div>
 
-	 <%= f.input :title, label: 'Nom :', error: 'obligatoire' %>
+	<div class="section section_form">
 
-	 <%= f.input :description, label: 'Description :', error: 'obligatoire' %>
+	<%= simple_form_for @adresse do |f| %>
 
-	 <%= f.association :category %>
+		<label for="adresse_title">NOM</label>
+		<%= f.input :title, label: false, required: true %>
 
-	 <%= f.association :subcategory %>
+		<label for="adresse_description">DESCRIPTION</label>
+		<%= f.input :description, label: false %>
 
-	 <%= f.association :usecases, :as => :check_boxes %>
+		<label for="adresse_category">CATÉGORIE</label>
+		<%= f.association :category, label: false, required: true %>
+		 
+		<label for="adresse_subcategory">SOUS-CATÉGORIE</label>
+		<%= f.association :subcategory, label: false, required: true %>
 
-	 <%= f.input :price %>
+		<label for="adresse_subcategory" class="label_with_margin">UNE BONNE ADRESSE SI</label>
+		<%= f.association :usecases, label: false, :as => :check_boxes %>
+		<div class="clearfix"></div>
 
-	 <%= f.input :price_detail %>
+		<label for="adresse_price">PRIX (ex: 3€ les 24 huitres)</label>
+		<%= f.input :price, label: false %><div class="euro">€</div> <%= f.input :price_detail, label: false %>
+		<div class="clearfix"></div>
 
-	 <%= f.input :credit_card %>
+		<label for="gmap" class="label_with_margin">LOCALISATION</label>
+		 <%= f.gmap_coordinate_picker :lat_column => 'latitude', :lng_column => 'longitude' , :zoom_level => 16, :default_coordinates => [48.869267,2.3477251], :api_key => 'AIzaSyDIi_Y7sQ3WtRrysyF4A-zz75f8W2IhNYw'  %>
 
-	 <%= f.gmap_coordinate_picker :lat_column => 'latitude', :lng_column => 'longitude' , :zoom_level => 16, :default_coordinates => [48.869267,2.3477251], :api_key => 'AIzaSyDIi_Y7sQ3WtRrysyF4A-zz75f8W2IhNYw'  %>
+		 <%= f.button :submit %>
 
-	 <%= f.button :submit %>
+	<% end %>
 
-<% end %>
+<%= link_to 'Supprimer cette adresse', adress_path(@adresse),
+              method: :delete,
+              data: { confirm: 'Tu as le droit de faire ça, mais sache que c\'est définitif (si ton prénom commence par Jean et termine par Paul, s\'il te plait demande plutôt à un adulte.)'} %>
+
+
+	</div>
+</div>
