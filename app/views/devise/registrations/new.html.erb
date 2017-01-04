@@ -1,0 +1,29 @@
+<div class="page_form">
+
+	<a class="back" href="javascript:history.back()">RETOUR</a>
+
+	<div class="section section_site_title">
+		<h1>S'inscrire</h1>
+	</div>
+
+	<div class="section section_form">
+
+		<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+		  <%= f.error_notification %>
+
+		  <div class="form-inputs">
+		  	<label for="adresse_title">ADRESSE MAIL</label>
+		    <%= f.input :email, label: false, required: true, autofocus: true %>
+		    <label for="adresse_title">MOT DE PASSE (6 caractères)</label>
+		    <%= f.input :password,label: false, required: true %>
+		    <label for="adresse_title">CONFIRMER MOT DE PASSE</label>
+		    <%= f.input :password_confirmation,label: false, required: true %>
+		  </div>
+		  <div class="form-actions">
+		    <%= f.button :submit, "Valider" %>
+		  </div>
+		<% end %>
+
+	</div>
+
+</div>

@@ -257,22 +257,23 @@ body{
 	margin-bottom: 2px;
 }
 
-.adresse_card .adresse_categories, .adresse_card .adresse_price{
+.adresse_categories, .adresse_card .adresse_price{
 	margin-bottom: 10px;
 }
 
-.adresse_card .adresse_categories{
+.adresse_categories{
 
 	font-size: 14px;
 	font-weight: 300;
 	color: #ababab;
+	cursor: default;
 }
 
-.adresse_card .adresse_categories .category_title{
+.adresse_categories .category_title{
 	color: #ababab;
 }
 
-.adresse_card .adresse_categories .category_title:hover{
+.adresse_categories .category_title:hover{
 	text-decoration: underline;
 }
 
@@ -575,6 +576,8 @@ body{
 /* --------------------- FORMS ADRESSE ----------------------------- */
 /* ----------------------------------------------------------------- */
 
+
+
 .page_form{
 	/*background-image: url(http://i.giphy.com/jmG9f3aumasGk.gif);
 	background-size: cover;
@@ -592,7 +595,6 @@ body{
 	max-width: 700px;
 	margin: auto;
 	/*box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);*/
-	margin-top: 50px;
 	background-color: #fff;
 	border-radius: 2px;
 }
@@ -695,4 +697,16 @@ body{
     border-radius: 2px;
 }
 
+.delete_link{
+	color: #ababab;
+	font-size: 12px;
+	display: block;
+	width: auto;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+}
 
+.delete_link:hover{
+	text-decoration: underline;
+}

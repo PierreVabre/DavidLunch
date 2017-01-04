@@ -43,6 +43,7 @@
 
 <%= link_to 'Supprimer cette adresse', adress_path(@adresse),
               method: :delete,
+              :class=> "delete_link",
               data: { confirm: 'Tu as le droit de faire ça, mais sache que c\'est définitif (si ton prénom commence par Jean et termine par Paul, s\'il te plait demande plutôt à un adulte.)'} %>
 
 

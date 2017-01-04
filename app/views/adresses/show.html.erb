@@ -10,8 +10,25 @@
 
 <a class="back" href="javascript:history.back()">RETOUR</a>
 
-<div class="section section_site_title">
+
+  <div class="section section_site_title">
+  <div class="adresse_categories">
+    <% if Category.exists?(@adresse.category_id) %>
+      <% @category = Category.find(@adresse.category_id) %>
+      <% @subcategory = Subcategory.find(@adresse.subcategory_id) %>
+      <a class="category_title" href="<%= category_path @category %>">
+        <%= @category.title %> 
+      </a>/ 
+      <a class="category_title" href="<%= subcategory_path @subcategory %>">
+        <%= @subcategory.title %>
+      </a>
+    <% end %>
+  </div>
+
 	<h1 class="site_title adressetitle"><%= @adresse.title %></h1>
+
+
+
 	<div class="adresse_price ligne_info">
 		<span class="bold"><%= @adresse.price %>€</span> <%= @adresse.price_detail %>
 	</div>			

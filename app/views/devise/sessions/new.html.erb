@@ -1,0 +1,24 @@
+<div class="page_form">
+
+	<a class="back" href="javascript:history.back()">RETOUR</a>
+
+	<div class="section section_site_title">
+		<h1>Se connecter</h1>
+	</div>
+
+	<div class="section section_form">
+
+		<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+		  <div class="form-inputs">
+		    <%= f.input :email, required: false, autofocus: true %>
+		    <%= f.input :password, required: false %>
+		  </div>
+		  <div class="form-actions">
+		    <%= f.button :submit, "Valider" %>
+		  </div>
+		<% end %>
+
+		<%= render "devise/shared/links" %>
+
+	</div>
+</div>
