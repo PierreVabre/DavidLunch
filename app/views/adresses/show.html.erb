@@ -25,7 +25,7 @@
 	  		<!--<a class="edit_adresse_link" href="<%= edit_adress_path @adresse %>">Ajouter une description</a>-->
 	  	<% end %>
 	</div>
-	<a class="edit_adresse_btn" href="<%= edit_adress_path @adresse %>">Mettre à jour ces infos</a>
+  <%= link_to "Mettre à jour ces infos", edit_adress_path, 'data-turbolinks' => false, class: 'edit_adresse_btn' %>
 </div>
 
 

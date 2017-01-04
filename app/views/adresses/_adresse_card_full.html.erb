@@ -1,0 +1,109 @@
+<a href="<%= adress_path adresse %>">
+	<div class="adresse_card">
+			
+			<div class="adresse_categories">
+				<% if Category.exists?(adresse.category_id) %>
+					<% @category = Category.find(adresse.category_id) %>
+					<% @subcategory = Subcategory.find(adresse.subcategory_id) %>
+					<a class="category_title" href="<%= category_path @category %>">
+						<%= @category.title %> 
+					</a>/ 
+					<a class="category_title" href="<%= subcategory_path @subcategory %>">
+						<%= @subcategory.title %>
+					</a>
+				<% end %>
+			</div>
+
+			<a href="<%= adress_path adresse %>" class="adresse_title" href="<%= adress_path adresse %>">
+				<%= adresse.title %>
+			</a>
+
+			<div class="adresse_price">
+				<span class="price"><%= adresse.price %>€</span> <span class="price_what"><%= adresse.price_detail %></span>
+
+				<div class="description"><%= adresse.description %></div>
+				
+			</div>
+
+			<!-- MAP -->
+
+			<div style='width: 100%;'>
+			    <div id="map" class="adresse_map"></div>
+			</div>
+
+			<script type="text/javascript">
+
+
+			var directionsDisplay = new google.maps.DirectionsRenderer();
+			var directionsService = new google.maps.DirectionsService();
+
+			function calcRoute() {
+			  var origin      = new google.maps.LatLng(48.869267, 2.3477251);
+			  var destination = new google.maps.LatLng(<%= adresse.latitude %>, <%= adresse.longitude %>);
+
+			  var request = {
+			      origin:      origin,
+			      destination: destination,
+			      travelMode:  google.maps.TravelMode.WALKING
+			  };
+			  directionsService.route(request, function(response, status) {
+			    if (status == google.maps.DirectionsStatus.OK) {
+			      directionsDisplay.setDirections(response);
+			    }
+			  });
+			}
+
+			calcRoute();
+
+			var handler = Gmaps.build('Google');
+			handler.buildMap({ provider: {styles: [
+			  {
+			    "featureType": "poi.business",
+			    "stylers": [
+			      {
+			        "visibility": "off"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "poi.park",
+			    "elementType": "labels.text",
+			    "stylers": [
+			      {
+			        "visibility": "off"
+			      }
+			    ]
+			  }
+			]}, internal: {id: 'map'}}, function(){
+			  directionsDisplay.setMap(handler.getMap());
+			});
+
+			</script>
+
+
+
+			<!-- /MAP -->
+
+			<% if adresse.geocoded? %>
+			<% distance_mile = adresse.distance_from([48.869267,2.3477251]) 
+			distance_jauge = distance_mile/0.4*100
+			if distance_jauge > 100
+				distance_jauge = 100
+			end
+			distance_metres = (distance_mile*1.609)*1000
+			distance_minutes = distance_metres*0.013
+			%>
+
+			<div class="distance_jauge">
+				<div class="distance_jauge_level" style="width:<%= distance_jauge %>%">
+					<div class="distance_value"> <%= eval '%.0f' % distance_minutes %> min</div> 
+				</div>
+			</div>
+
+
+
+		<% end %>
+
+		
+	</div>
+</a>

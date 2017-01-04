@@ -19,7 +19,7 @@
 class Subcategory < ApplicationRecord
 
 	belongs_to :category, optional: true
-	has_many :adresses
+	has_many :adresses, class_name: 'Adresse'
 
 	#has_many :subcategory
 	#belongs_to :parent_id, class_name: "Category"

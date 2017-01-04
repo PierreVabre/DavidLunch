@@ -9,8 +9,13 @@
 </div>
 
 <div class="section section_categories_list">
-	<% @category_subcategories.each do |subcategory| %>
-		<%= render partial: "/subcategories/subcategory_card", locals: {subcategory: subcategory} %>
+	
+	<% @category_subcategories.each do |subcategory| %>		
+		
+    <% unless subcategory.adresses.empty? %>		
+			<%= render partial: "/subcategories/subcategory_card", locals: {subcategory: subcategory} %>
+		<% end %>
+	
 	<% end %>
 	<div class="clearfix"></div>
 </div>

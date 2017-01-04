@@ -6,6 +6,10 @@ class SubcategoriesController < ApplicationController
 		@subcategories = Subcategory.all
 	end
 
+	def show
+		@subcategory_adresses = Adresse.order(title: :asc).where(subcategory_id: @subcategory.id)
+	end
+
 	def new
 		@subcategory = Subcategory.new
 	end	
