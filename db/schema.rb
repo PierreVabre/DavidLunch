@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161223154208) do
+ActiveRecord::Schema.define(version: 20170106134802) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "adresses", force: :cascade do |t|
     t.string  "title"
@@ -24,14 +27,14 @@ ActiveRecord::Schema.define(version: 20161223154208) do
     t.integer "subcategory_id"
     t.string  "price_detail"
     t.integer "distance"
-    t.index ["category_id"], name: "index_adresses_on_category_id"
+    t.index ["category_id"], name: "index_adresses_on_category_id", using: :btree
   end
 
   create_table "adresses_usecases", id: false, force: :cascade do |t|
     t.integer "adresse_id"
     t.integer "usecase_id"
-    t.index ["adresse_id"], name: "index_adresses_usecases_on_adresse_id"
-    t.index ["usecase_id"], name: "index_adresses_usecases_on_usecase_id"
+    t.index ["adresse_id"], name: "index_adresses_usecases_on_adresse_id", using: :btree
+    t.index ["usecase_id"], name: "index_adresses_usecases_on_usecase_id", using: :btree
   end
 
   create_table "categories", force: :cascade do |t|
@@ -42,8 +45,13 @@ ActiveRecord::Schema.define(version: 20161223154208) do
     t.datetime "updated_at",  null: false
     t.integer  "parent_id"
     t.string   "gif"
-    t.index ["parent"], name: "index_categories_on_parent"
-    t.index ["parent_id"], name: "index_categories_on_parent_id"
+    t.index ["parent"], name: "index_categories_on_parent", using: :btree
+    t.index ["parent_id"], name: "index_categories_on_parent_id", using: :btree
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "subcategories", force: :cascade do |t|
@@ -54,7 +62,7 @@ ActiveRecord::Schema.define(version: 20161223154208) do
     t.datetime "updated_at",  null: false
     t.integer  "category"
     t.string   "gif"
-    t.index ["category"], name: "index_subcategories_on_category"
+    t.index ["category"], name: "index_subcategories_on_category", using: :btree
   end
 
   create_table "usecases", force: :cascade do |t|
@@ -78,8 +86,8 @@ ActiveRecord::Schema.define(version: 20161223154208) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "welcomegifs", force: :cascade do |t|
