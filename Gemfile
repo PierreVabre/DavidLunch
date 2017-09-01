@@ -31,7 +31,7 @@ gem 'gmaps4rails'
 gem 'gmap_coordinates_picker', '~> 0.1.0'
 gem 'geocoder'
 gem 'giphy'
-gem 'pg', '~> 0.18'
+gem 'pg', '0.18'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

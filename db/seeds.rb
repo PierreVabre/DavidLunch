@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Category.create(title: 'cat')
+Adresse.create(title: 'adresse')
+Usecase.create(title: 'usecase')
+Subcategory.create(title: 'subcategory')
+Welcomegif.create(gif: 'https://media.giphy.com/media/3og0IQCfsZXScpvKhi/giphy.gif')
+
