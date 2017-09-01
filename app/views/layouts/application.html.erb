@@ -30,7 +30,7 @@
         <% if user_signed_in? %>
           <%= link_to('Se déconnecter', destroy_user_session_path, :method => :delete, :class=> "connection_link") %>
         <% else %>
-            <a class="connection_link" href="<%= new_user_registration_path %>">S'inscrire</a><a class="connection_link" href="http://localhost:3000/users/sign_in">Se connecter</a>
+            <a class="connection_link" href="<%= new_user_registration_path %>">S'inscrire</a><a class="connection_link" href="<%= new_user_session %>">Se connecter</a>
         <% end %>
       </div>
   	</div>
